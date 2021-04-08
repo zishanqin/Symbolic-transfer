@@ -1,8 +1,8 @@
 # COMP4450
 # TODO
 1. GAN configuration
-2. Game configuration, selection, visualisation (compare to DQN)
-3. Symbolic extraction: read paper, Contrastive learning
+2. Game configuration, selection, visualisation (compare to DQN) (Junming)
+3. Symbolic extraction: read paper (Wei), Contrastive learning coding part (Zishan)
 4. Report
 
 # Questions
@@ -15,4 +15,5 @@
 4. 17 May presentation 
 
 # Reference
-https://github.com/taesungp/contrastive-unpaired-translation
+Symbolic: https://github.com/taesungp/contrastive-unpaired-translation
+Games: https://gsurma.github.io/
