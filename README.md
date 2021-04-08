@@ -15,5 +15,6 @@
 4. 17 May presentation 
 
 # Reference
-Symbolic: https://github.com/taesungp/contrastive-unpaired-translation
-Games: https://gsurma.github.io/
+Symbolic: https://github.com/taesungp/contrastive-unpaired-translation <br>
+Games: https://gsurma.github.io/<br>
+Previous documentation url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz
