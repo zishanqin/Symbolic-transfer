@@ -13,3 +13,6 @@
 2. 1 May (end of week 8) start report
 3. 10 May (week 10) prepare presentation
 4. 17 May presentation 
+
+# Reference
+https://github.com/taesungp/contrastive-unpaired-translation
