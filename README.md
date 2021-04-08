@@ -1,4 +1,4 @@
-# COMP4450
+# Generative adversarial transfer learning for symbolic representation in DRL
 # TODO
 1. GAN configuration
 2. Game configuration, selection, visualisation (compare to DQN) (Junming)
