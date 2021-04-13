@@ -22,4 +22,6 @@
 1. https://gsurma.github.io/
 2. http://gym.openai.com/docs/
 3. http://gym.openai.com/envs/#classic_control <br>
-Previous documentation url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz
+
+### Previous documentation 
+url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz
