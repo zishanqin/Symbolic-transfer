@@ -16,6 +16,7 @@
 
 # Reference
 Symbolic: https://github.com/taesungp/contrastive-unpaired-translation <br>
+https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
 Games: <br> 
 1. https://gsurma.github.io/
 2. http://gym.openai.com/docs/
