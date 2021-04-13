@@ -15,10 +15,10 @@
 4. 17 May presentation 
 
 # Reference
-Symbolic: 
+### Symbolic: 
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
-Games: <br> 
+### Games: <br> 
 1. https://gsurma.github.io/
 2. http://gym.openai.com/docs/
 3. http://gym.openai.com/envs/#classic_control <br>
