@@ -26,3 +26,12 @@
 ### Previous documentation 
 url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz<br>
 report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
+
+
+# Installation
+```
+pip install -r requirements_1.txt
+git clone https://github.com/openai/baselines.git
+cd baselines
+pip install -e .
+```
