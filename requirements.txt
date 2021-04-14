@@ -1,0 +1,2 @@
+pip install pydot
+sudo port install graphviz
