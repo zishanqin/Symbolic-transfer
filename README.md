@@ -20,19 +20,12 @@
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
 ### Games: <br> 
-1. https://gsurma.github.io/
-2. http://gym.openai.com/docs/
-3. http://gym.openai.com/envs/#classic_control <br>
+Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
+Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
+
+### Game using GAN:
+1. https://download.visinf.tu-darmstadt.de/data/from_games/
 
 ### Previous documentation 
 url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz<br>
 report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
-
-
-# Installation
-```
-pip install -r requirements_1.txt
-git clone https://github.com/openai/baselines.git
-cd baselines
-pip install -e .
-```
