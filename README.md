@@ -15,9 +15,6 @@
 3. 10 May (week 10) prepare presentation
 4. 17 May presentation 
 
-# Tut preperation
-<img align="left" src="https://github.com/zishanqin/Generative-adversarial-transfer-learning-for-symbolic-representation-in-DRL/Slide-show (1).mov">
-
 # Reference
 ### Symbolic: 
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
