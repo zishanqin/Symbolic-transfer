@@ -3,7 +3,8 @@
 1. GAN configuration
 2. Game configuration, selection, visualisation (compare to DQN) (Junming)
 3. Symbolic extraction: read paper (Wei), Contrastive learning coding part (Zishan)
-4. Report
+4. Combination of GAN and symbolic AI
+5. Report
 
 # Questions
 1. Game suggestions for symbolic GAN
