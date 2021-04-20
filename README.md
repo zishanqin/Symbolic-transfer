@@ -16,7 +16,7 @@
 4. 17 May presentation 
 
 # Tut preperation
-<img align="left" src="https://github.com/zishanqin/Generative-adversarial-transfer-learning-for-symbolic-representation-in-DRL/Slide-show(1).mov">
+<img align="left" src="https://github.com/zishanqin/Generative-adversarial-transfer-learning-for-symbolic-representation-in-DRL/Slide-show (1).mov">
 
 # Reference
 ### Symbolic: 
