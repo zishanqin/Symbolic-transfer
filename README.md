@@ -20,8 +20,8 @@
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
 ### Games: <br> 
-Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
-Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
+1. Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
+2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
 
 ### Game using GAN:
 1. https://download.visinf.tu-darmstadt.de/data/from_games/
