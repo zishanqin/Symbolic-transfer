@@ -55,5 +55,5 @@ conda install matplotlib
 
 ### run the file
 ```
-python NEW_GAME.py
+python symbolic_game/NEW_GAME.py
 ```
