@@ -11,10 +11,9 @@ https://youtu.be/r4mUwgBTt0k
 1. Game suggestions for symbolic GAN
 
 # Due date
-1. Finish rough structure in break (Tue 13 Apr meeting)
-2. 1 May (end of week 8) start report
-3. 10 May (week 10) prepare presentation
-4. 17 May presentation 
+1. Finish A3 questions (Q3 find paper) before 7 May
+2. 10 May (week 10) prepare presentation
+3. 17 May presentation 
 
 # Reference
 ### Symbolic: 
