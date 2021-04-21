@@ -19,13 +19,41 @@ https://youtu.be/r4mUwgBTt0k
 ### Symbolic: 
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
+3. Symbolic Reinforcement Learning with Common Sense: https://github.com/AimoreRRD/Reinforcement-Learning-Research
+
 ### Games: <br> 
 1. Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
 2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
-
-### Game using GAN:
-1. https://download.visinf.tu-darmstadt.de/data/from_games/
+3. Encountered problems: Atari games are complex domains, and the symbolic representations might not be easily underastandable. Change to easier domain as symbolic.3.
 
 ### Previous documentation 
 url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz<br>
 report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
+
+---
+
+## Installation
+
+### create conda virtual env
+```
+conda create -n symbolenv python=3.6
+```
+
+### enter virual environment
+```
+conda activate symbolenv
+```
+
+### install packages
+```
+pip install pygame
+
+pip install pandas==0.25.3
+
+conda install matplotlib
+```
+
+### run the file
+```
+python NEW_GAME.py
+```

@@ -1,3 +1,0 @@
-pip3 install pydot
-sudo port install graphviz
-pip3 install keras
