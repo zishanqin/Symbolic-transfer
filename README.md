@@ -59,5 +59,7 @@ conda install xlsxwriter
 
 ### run the file
 ```
+cd symbolic_game/
 python NEW_GAME.py
 ```
+Press `G` to pause the game and plot graph. Close the graph to continue game playing.
