@@ -44,13 +44,17 @@ conda create -n symbolenv python=3.6
 conda activate symbolenv
 ```
 
-### install packages
+### install packages (!!watch out for `conda` and `pip`!!)
 ```
 pip install pygame
 
-pip install pandas==0.25.3
+pip install pandas==0.20.3
+
+pip install xlrd==1.2.0
 
 conda install matplotlib
+
+conda install xlsxwriter
 ```
 
 ### run the file

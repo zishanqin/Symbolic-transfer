@@ -38,6 +38,8 @@ import glob
 # config.gpu_options.per_process_gpu_memory_fraction = 0.3
 # set_session(tf.Session(config=config))
 
+
+# ------ environments ------
 # region COLOR DEFINITION
 white = (255, 255, 255)
 black = (0, 0, 0)
@@ -84,6 +86,8 @@ negative_reward = 10  # Negative Reward
 positive_reward = 1  # Positive Reward
 step_reward = 0  # Reward received by each step
 # endregion
+
+# ------ environments configuration (till line 640) ------
 
 # region TEXT FONTS DEFINITION
 smallfont = pygame.font.SysFont('comicsansms', 13)
@@ -635,6 +639,9 @@ def create_model(s_alg, state_shape, net_conf):
 
 # endregion
 
+
+# ------ RL algorithms (till line 1030) ------
+
 # region DQN - CONFIGURATIONS
 class ExperienceReplay(object):
     """
@@ -1067,11 +1074,12 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
         negativo_list, positivo_list, agent, wall_list, h_max, v_max = environment_conf(s_env)
 
         env_dim = [h_max, v_max]
+        # load file for transfer learning
         if s_load == True:
             try:
                 model, op_conf = load_model(s_alg, __location__ + s_load_path)
-            except:
-                print("DID NOT FIND THE FILE")
+            except Exception as e:
+                print("DID NOT FIND THE FILE", __location__ + s_load_path, str(e))
         else:
             model, op_conf = create_model(s_alg, env_dim, net_conf)
 
@@ -1087,6 +1095,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
         loss_list = []
         # endregion
 
+        # main component to run the game
         while (episodes < s_episode):  # max_episodes
             negativo_list, positivo_list, agent, wall_list, h_max, v_max = environment_conf(s_env)
             # region INITIALIZE VARIABLES 2
@@ -1120,6 +1129,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
                 pygame.display.flip()
                 # endregion
 
+            # main reinforcement learning part
             while (True):  # max_steps or condition to finish
                 sleep(speed)
                 ''' EVENT HANDLE '''
@@ -1500,6 +1510,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
 
 # -------------------------------------------------------------------------------------------------- #
 ''' SELECT PARAMETERS TO RUN THE SOFTWARE '''
+# environment configuration
 Env = 11
 Alg_list = ["QL",
             "DSRL",
@@ -1512,22 +1523,23 @@ Alg_list = ["QL",
             "DSRL_object"]
 Alg = Alg_list[8] # Select the algorithm to be used
 Learn = True # To update its knowledge
-Load = False # To load a learned model
-Load_path = "/Results/Train/Env_1/Train_Env_1_DQN_4   00 33 03   01-05-18"
+Load = True # To load a learned model
+Load_path = "/Results/Train/Env_11/Train_Env_11_DSRL_object   23 03 57   04-21-21"
 
-Samples = 2 # Usually 10 samples
+# algorithm configuration
+Samples = 2 # Usually 10 samples (repeat 100 episodes for 2 times)
 Print = False # Print some info in the terminal
 Auto = True # Agent moves Automatic or if False it moves by pressing the Spacebar key
 Server = False # If running in the server since
 Prob = 0 # Probability to make a random move (exploration rate)
 Cond_to_end = "only_positive" # Choose from below (there are 4)
-Save = False # Save the model
+Save = True # Save the model
 speed = 0 # seconds per frame
 
 # Cond_to_end = "max_steps"
 # Cond_to_end = "coll_all"
 # Cond_to_end = "only_negative"
-Episodes = 1000 # Usually 1000 or 100
+Episodes = 100 # Usually 1000 or 100
 
 # region DQN Model Configurations:
 # max_memory_list =  [5, 5,  5,   30,  30, 30,  100, 100, 100]
