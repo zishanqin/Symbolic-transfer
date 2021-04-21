@@ -55,5 +55,7 @@ conda install matplotlib
 
 ### run the file
 ```
-python symbolic_game/NEW_GAME.py
+cd symbolic_game/
+python NEW_GAME.py
 ```
+Press `G` to pause the game and plot graph. Close the graph to continue game playing.
