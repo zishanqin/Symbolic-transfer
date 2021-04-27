@@ -1,5 +1,8 @@
 # Generative adversarial transfer learning for symbolic representation in DRL
-https://youtu.be/r4mUwgBTt0k
+### Presentation url
+Tut W8: <br>
+Tut W7: https://youtu.be/r4mUwgBTt0k
+
 # TODO
 1. GAN configuration
 2. Game configuration, selection, visualisation (compare to DQN) (Junming)
