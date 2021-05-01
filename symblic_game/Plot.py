@@ -9,13 +9,13 @@ import os
 plt.interactive(False)
 
 # FOR SERVER:
-# __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-# path = __location__+ "/Results/Train/"
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+path = __location__+ "/Results/Train/"
 
 # FOR MY MACHINE:
 
-path = r"E:\ENGLAND\City University of London\Events\NIPS\NIPS_RESULTS\Comparison between DSRL, QL, DSRL_trick in ALL ENVs/env"
-file_path_list = []
+# path = r"E:\ENGLAND\City University of London\Events\NIPS\NIPS_RESULTS\Comparison between DSRL, QL, DSRL_trick in ALL ENVs/env"
+# file_path_list = []
 #######################################################
 ''' CHOOSE WHAT TO PLOT '''
 plot_Score = True
@@ -24,13 +24,12 @@ plot_Percent = False
 
 ''' CHOOSE ENVIRONMENTS '''
 # env_list = [1,2,3,4,8,9,10,11,12,13,14,15,16,17,18,19]
-env_list = [2,3]
-# path_core = "/Train_Env_"
+env_list = [1,11]
 path_core = "/Test_Env_"
 
 percent_env_list = [8, 9, 10, 11]
 ''' CHOOSE SAVE and SHOW '''
-save_Plot = True
+save_Plot = False
 save_path = r"E:\ENGLAND\City University of London\Events\NIPS\NIPS_RESULTS\Comparison between DSRL, QL, DSRL_trick in ALL ENVs/"
 show_Plot = True
 

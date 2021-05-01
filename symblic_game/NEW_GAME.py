@@ -1508,6 +1508,9 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
     return
 
 
+
+
+
 # -------------------------------------------------------------------------------------------------- #
 ''' SELECT PARAMETERS TO RUN THE SOFTWARE '''
 # environment configuration
@@ -1523,14 +1526,16 @@ Alg_list = ["QL",
             "DSRL_object"]
 Alg = Alg_list[8] # Select the algorithm to be used
 Learn = True # To update its knowledge
-Load = True # To load a learned model
+Load = False # To load a learned model
 Load_path = "/Results/Train/Env_11/Train_Env_11_DSRL_object   23 03 57   04-21-21"
 
 # algorithm configuration
-Samples = 2 # Usually 10 samples (repeat 100 episodes for 2 times)
-Print = False # Print some info in the terminal
+Samples = 2 # Usually 10 samples (repeat 100 episodes for 10 times)
+Print = True # Print some info in the terminal
 Auto = True # Agent moves Automatic or if False it moves by pressing the Spacebar key
 Server = False # If running in the server since
+
+# change Prob to 1 for probe training??
 Prob = 0 # Probability to make a random move (exploration rate)
 Cond_to_end = "only_positive" # Choose from below (there are 4)
 Save = True # Save the model

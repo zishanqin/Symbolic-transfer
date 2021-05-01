@@ -1,4 +1,5 @@
 import pygame, math
+import random
 
 white = (255,255,255)
 black = (0,0,0)
@@ -91,7 +92,11 @@ class Start(pygame.Rect):
 class Negativo(pygame.Rect):
     color = pink
     def __init__(self,img,x,y):
-         self.icon = pygame.image.load(str(img) + size + '.png')
+         # change self.icon to change domain
+         # only + -
+         # self.icon = pygame.image.load(str(img) + size + '.png')
+         # many symbols
+         self.icon = pygame.image.load(str(img) + size + str(random.randint(1,4)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y
@@ -99,7 +104,11 @@ class Negativo(pygame.Rect):
 class Positivo(pygame.Rect):
     color = green
     def __init__(self,img,x,y):
-         self.icon = pygame.image.load(str(img) + size + '.png')
+         # change self.icon to change domain
+         # only + -
+         # self.icon = pygame.image.load(str(img) + size + '.png')
+         # many symbols
+         self.icon = pygame.image.load(str(img) + size + str(random.randint(1,4)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y
