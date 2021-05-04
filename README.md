@@ -1,6 +1,6 @@
 # Generative adversarial transfer learning for symbolic representation in DRL
 ### Presentation url
-Tut W9: https://youtu.be/JaT9m5BhNh4
+Tut W9: https://youtu.be/JaT9m5BhNh4<br>
 Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
 Tut W7: https://youtu.be/r4mUwgBTt0k
 
