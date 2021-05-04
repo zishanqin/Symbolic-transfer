@@ -24,6 +24,10 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
 3. Symbolic Reinforcement Learning with Common Sense: https://github.com/AimoreRRD/Reinforcement-Learning-Research
 
+### Probe policy:
+Single Episode Policy Transfer in Reinforcement Learning
+https://arxiv.org/abs/1910.07719
+
 ### Games: <br> 
 1. Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
 2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
