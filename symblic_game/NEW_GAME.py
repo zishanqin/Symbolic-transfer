@@ -82,7 +82,7 @@ def pop(self):
         self.built = False
 
 # region REWARDS
-negative_reward = 10  # Negative Reward
+negative_reward = 1  # Negative Reward
 positive_reward = 1  # Positive Reward
 step_reward = 0  # Reward received by each step
 # endregion
@@ -1101,7 +1101,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
             # region INITIALIZE VARIABLES 2
             episodes += 1
             episodes_list.append(episodes)
-            max_steps = 10
+            max_steps = 25
             steps_list.append(steps)
             steps = 0
             act_list = []
@@ -1514,7 +1514,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
 # -------------------------------------------------------------------------------------------------- #
 ''' SELECT PARAMETERS TO RUN THE SOFTWARE '''
 # environment configuration
-Env = 11
+Env = 10
 Alg_list = ["QL",
             "DSRL",
             "DSRL_object_near",
@@ -1525,26 +1525,26 @@ Alg_list = ["QL",
             "DSRL_dist_type_near_propNeg",
             "DSRL_object"]
 Alg = Alg_list[8] # Select the algorithm to be used
-Learn = True # To update its knowledge
-Load = False # To load a learned model
-Load_path = "/Results/Train/Env_11/Train_Env_11_DSRL_object   23 03 57   04-21-21"
+Learn = False # To update its knowledge
+Load = True # To load a learned model
+Load_path = "/Results/Train/Env_10/Train_Env_10_DSRL_object   21 48 19   05-04-21"
 
 # algorithm configuration
-Samples = 2 # Usually 10 samples (repeat 100 episodes for 10 times)
+Samples = 1 # Usually 10 samples (repeat 100 episodes for 10 times)
 Print = True # Print some info in the terminal
 Auto = True # Agent moves Automatic or if False it moves by pressing the Spacebar key
 Server = False # If running in the server since
 
 # change Prob to 1 for probe training??
 Prob = 0 # Probability to make a random move (exploration rate)
-Cond_to_end = "only_positive" # Choose from below (there are 4)
-Save = True # Save the model
+Cond_to_end = "max_steps" # Choose from below (there are 4)
+Save = False # Save the model
 speed = 0 # seconds per frame
 
 # Cond_to_end = "max_steps"
 # Cond_to_end = "coll_all"
 # Cond_to_end = "only_negative"
-Episodes = 100 # Usually 1000 or 100
+Episodes = 200 # Usually 1000 or 100
 
 # region DQN Model Configurations:
 # max_memory_list =  [5, 5,  5,   30,  30, 30,  100, 100, 100]

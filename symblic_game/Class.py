@@ -93,10 +93,10 @@ class Negativo(pygame.Rect):
     color = pink
     def __init__(self,img,x,y):
          # change self.icon to change domain
-         # only + -
-         # self.icon = pygame.image.load(str(img) + size + '.png')
-         # many symbols
-         self.icon = pygame.image.load(str(img) + size + str(random.randint(1,4)) + '.png')
+         # only + - : source domain (DSRL score: 52)
+         self.icon = pygame.image.load(str(img) + size + '1' + '.png')
+         # many symbols : target domain
+         # self.icon = pygame.image.load(str('negativo') + size + str(random.randint(2,3)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y
@@ -105,10 +105,10 @@ class Positivo(pygame.Rect):
     color = green
     def __init__(self,img,x,y):
          # change self.icon to change domain
-         # only + -
-         # self.icon = pygame.image.load(str(img) + size + '.png')
-         # many symbols
-         self.icon = pygame.image.load(str(img) + size + str(random.randint(1,4)) + '.png')
+         # only + - : source domain
+         self.icon = pygame.image.load(str(img) + size + '1' + '.png')
+         # many symbols : target domain
+         # self.icon = pygame.image.load(str('positivo') + size + str(random.randint(2,3)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y
