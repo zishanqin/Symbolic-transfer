@@ -40,6 +40,13 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 Single Episode Policy Transfer in Reinforcement Learning
 https://arxiv.org/abs/1910.07719
 
+### Possible RL techniques
+1. Monte-Carlo Methods 
+- model-free approaches, which means the target policy is optimized using samples of inter-actions with the environment, without requiring knowledge of the MDP’s transition dynamics. Monte-Carlo methods use samples of episodes to estimate the value of each state based on episodes starting from that state. Monte-Carlo methods can be off-policy, if the episodic samples are collected by a behavior policy which are different from the target policy considered by the current learning step. They can also be on-policy, when the samples are collected by following the target policy. Importance sampling is usually applied to the off-policy approaches in order to transform the expectation of returns from the behavior policy to the target policy [14], [15].
+2. Temporal-Difference Learning, or TD-learning for short,
+- an alternative to Monte-Carlo methods for solving the prediction problem. The key idea behind TD-learning is to learn the state quality function by bootstrapping, which means it updates its estimation of the function based on another estimation. It can also be extended to solve the control problem, so that both value function and policy can get improved. TD-learning is one of the most widely used RL frameworks due to its simplicity and general applicability.
+Examples of on-policy TD-learning algorithms include SARSA [16], Expected SARSA [17], Actor-Critic [18] and its variant called A3C [19]. Examples of off-policy TD-leaning approaches are Q-learning [20] and its variants built with deep-neural networks, such as DQN [21], Double-DQN [21], and etc.
+
 ### Games: <br> 
 1. Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
 2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
