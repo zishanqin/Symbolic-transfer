@@ -82,7 +82,7 @@ def pop(self):
         self.built = False
 
 # region REWARDS
-negative_reward = 1  # Negative Reward
+negative_reward = 5  # Negative Reward
 positive_reward = 1  # Positive Reward
 step_reward = 0  # Reward received by each step
 # endregion
@@ -198,6 +198,7 @@ def draw_objects(agent, positivo_list, negativo_list, wall_list, screen):
 
 # region CREATE THE STATE FROM THE ENVIRONMENT
 def update_state(h_max, v_max, agent, positivo_list, negativo_list, wall_list):
+    # state is defined in terms of symbols not pixels...
     state = np.zeros((v_max, h_max)).astype(np.int16)
     for i in positivo_list:
         state[i.pos[1]][i.pos[0]] = 60  # SYMBOL 60 POSITIVE
@@ -831,8 +832,9 @@ def choose_action(s_alg, state, agent_pos, model, s_prob):
         n_action = random.choice(actions)
         print_action = 'Random Act (Prob):'
     elif zero == True:
-        n_action = random.choice(actions)
-        print_action = 'Random Act (Zero):'
+        # n_action = random.choice(actions)
+        print_action = 'NOT Random Act (Zero):'
+        pass
     else:
         print_action = 'Chosen Act:'
     # print("\nNEW MODEL - CHOOSE ACTION\n", model)
@@ -1095,13 +1097,13 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
         loss_list = []
         # endregion
 
-        # main component to run the game
+        # main component to an episode
         while (episodes < s_episode):  # max_episodes
             negativo_list, positivo_list, agent, wall_list, h_max, v_max = environment_conf(s_env)
             # region INITIALIZE VARIABLES 2
             episodes += 1
             episodes_list.append(episodes)
-            max_steps = 25
+            max_steps = 20
             steps_list.append(steps)
             steps = 0
             act_list = []
@@ -1514,7 +1516,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
 # -------------------------------------------------------------------------------------------------- #
 ''' SELECT PARAMETERS TO RUN THE SOFTWARE '''
 # environment configuration
-Env = 10
+Env = 11
 Alg_list = ["QL",
             "DSRL",
             "DSRL_object_near",
@@ -1524,13 +1526,13 @@ Alg_list = ["QL",
             "DSRL_dist_type_near",
             "DSRL_dist_type_near_propNeg",
             "DSRL_object"]
-Alg = Alg_list[8] # Select the algorithm to be used
+Alg = Alg_list[1] # Select the algorithm to be used
 Learn = False # To update its knowledge
 Load = True # To load a learned model
-Load_path = "/Results/Train/Env_10/Train_Env_10_DSRL_object   21 48 19   05-04-21"
+Load_path = "/Results/Train/Env_11/Train_Env_11_DSRL   02 41 20   05-05-21"
 
 # algorithm configuration
-Samples = 1 # Usually 10 samples (repeat 100 episodes for 10 times)
+Samples = 2 # Usually 10 samples (repeat 100 episodes for 10 times)
 Print = True # Print some info in the terminal
 Auto = True # Agent moves Automatic or if False it moves by pressing the Spacebar key
 Server = False # If running in the server since
@@ -1539,12 +1541,12 @@ Server = False # If running in the server since
 Prob = 0 # Probability to make a random move (exploration rate)
 Cond_to_end = "max_steps" # Choose from below (there are 4)
 Save = False # Save the model
-speed = 0 # seconds per frame
+speed = 0.05 # seconds per frame
 
 # Cond_to_end = "max_steps"
 # Cond_to_end = "coll_all"
 # Cond_to_end = "only_negative"
-Episodes = 200 # Usually 1000 or 100
+Episodes = 500 # Usually 1000 or 100
 
 # region DQN Model Configurations:
 # max_memory_list =  [5, 5,  5,   30,  30, 30,  100, 100, 100]

@@ -96,7 +96,7 @@ class Negativo(pygame.Rect):
          # only + - : source domain (DSRL score: 52)
          self.icon = pygame.image.load(str(img) + size + '1' + '.png')
          # many symbols : target domain
-         # self.icon = pygame.image.load(str('negativo') + size + str(random.randint(2,3)) + '.png')
+         # self.icon = pygame.image.load(str('symbol') + str(random.randint(1,5)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y
@@ -108,7 +108,7 @@ class Positivo(pygame.Rect):
          # only + - : source domain
          self.icon = pygame.image.load(str(img) + size + '1' + '.png')
          # many symbols : target domain
-         # self.icon = pygame.image.load(str('positivo') + size + str(random.randint(2,3)) + '.png')
+         # self.icon = pygame.image.load(str('symbol') + str(random.randint(6,10)) + '.png')
          self.pos = [x, y]
          self.x = x
          self.y = y

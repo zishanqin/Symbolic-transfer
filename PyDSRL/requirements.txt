@@ -1,0 +1,10 @@
+numpy
+gym
+sklearn
+scipy
+keras
+matplotlib
+pandas
+imageio
+scikit-image
+tensorflow
