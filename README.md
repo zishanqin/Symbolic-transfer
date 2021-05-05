@@ -4,6 +4,10 @@ Tut W9: https://youtu.be/JaT9m5BhNh4<br>
 Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
 Tut W7: https://youtu.be/r4mUwgBTt0k
 
+# Mark:
+1. (3 Minute Lecture talk, May24, 11am-1pm) 10 marks - 6 marks for presentation, 4 marks for slides
+2. (15 minute tutorial presentation, including 3 minutes for questions) 10 marks – 6 marks for presentation, 4 marks for slides
+
 # TODO
 1. GAN configuration
 2. Game configuration, selection, visualisation (compare to DQN) (Junming)
