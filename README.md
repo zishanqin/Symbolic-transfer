@@ -17,7 +17,7 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 # Due date
 1. Finish A3 questions (Q3 find paper) before 7 May
 2. 10 May (week 10) prepare presentation
-3. $\textbf{Presentation slide should be submitted by 4pm, 16 May}$
+3. Presentation slide should be submitted by 4pm, 16 May
 4. 17 May/ 24 May lecture presentation + 19 May/ 26 My lecture presentaion
 
 # Reference
