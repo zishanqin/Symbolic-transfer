@@ -11,6 +11,16 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 4. Combination of GAN and symbolic AI
 5. Report
 
+# Sub-TODO (Before 16 May)
+1. Merge the code in 'towards' to have an Encoder
+2. Create some target domains (with the same size)
+3. Check the 'not-good' result and visualize
+4. Add probe policy
+5. Visualize
+6. Make slide 
+7. (Future work: Use GAN to generate target domain) 
+8. (may explore the tranfer for different domains)
+
 # Questions
 1. Game suggestions for symbolic GAN
 
