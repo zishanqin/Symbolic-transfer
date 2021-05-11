@@ -41,6 +41,9 @@ import glob
 
 # ------ environments ------
 # region COLOR DEFINITION
+explore_set = set()
+explore_dict = dict()
+
 white = (255, 255, 255)
 black = (0, 0, 0)
 grey = (80, 80, 80)
@@ -753,7 +756,7 @@ def define_optimizer(s_optimizer):
     return optimizer_selected, optimizer_config
 #
 
-def choose_action(s_alg, state, agent_pos, model, s_prob):
+def choose_action(s_alg, state, agent_pos, model, s_prob,step):
     # print("\nPREVIOUS MODEL - CHOOSE ACTION\n", model)
     zero = False
     if s_alg == "QL":
@@ -790,14 +793,33 @@ def choose_action(s_alg, state, agent_pos, model, s_prob):
                 model = model.fillna(0)
             Qts_a = model[tp_n_c].loc[s_n_c]
             # print("Qts_a - ", Qts_a)
+            global explore_dict
             if s_alg == "DSRL_dist_type_near" or s_alg == "DSRL_dist_type_near_propNeg" or s_alg == "DSRL_object_near": # Calculate the distance
                 s_n_c_abs = [int(s) for s in s_n_c if s.isdigit()]  # s_n_c_abs = state_new_absolute_distance
                 distance = np.sqrt(s_n_c_abs[0]**2 + s_n_c_abs[1]**2)
                 # print("distance",distance)
                 Qts_a = Qts_a.divide(distance*distance, axis=0)
-            a_v = [(value, key) for value, key in Qts_a.items()]
+            a_v = []
+            for action, value in  Qts_a.items():
+                pos_x = agent_pos[0]
+                pos_y = agent_pos[1]
+                if action == 'up':
+                    pos_y-=1
+                elif  action =="down":
+                    pos_y+=1
+                elif action =="right":
+                    pos_x +=1
+                else:
+                    pos_x -=1
+                if (pos_x, pos_y) in explore_dict:
+                    a_v.append((action, value-0.1*explore_dict[(pos_x, pos_y)]))
+                else:
+                    a_v.append((action, value))
+                
+            # a_v = [(value, key) for value, key in Qts_a.items()]
             # print("Qts_a - NEW", Qts_a)
             a_v_list.append(a_v) # Append Q-value
+        # print(a_v_list)
 
         # Sum the values of all Qs into a single Q
         for element in a_v_list:
@@ -817,7 +839,8 @@ def choose_action(s_alg, state, agent_pos, model, s_prob):
 
             if max(d.values()) == 0: zero = True
         else:
-            n_action = "down"
+            # n_action = "down"
+            n_action = random.choice(actions)
 
     elif s_alg == "DQN":
         state[agent_pos[1]][agent_pos[0]] = 120
@@ -828,7 +851,8 @@ def choose_action(s_alg, state, agent_pos, model, s_prob):
         if max(q[0]) == 0: zero = True
 
     x = random.random()  # E greedy exploration
-    if x < s_prob:
+    # if x < s_prob:
+    if step < 5 or x < s_prob:
         n_action = random.choice(actions)
         print_action = 'Random Act (Prob):'
     elif zero == True:
@@ -838,6 +862,8 @@ def choose_action(s_alg, state, agent_pos, model, s_prob):
     else:
         print_action = 'Chosen Act:'
     # print("\nNEW MODEL - CHOOSE ACTION\n", model)
+    # explore_set.add(tuple(agent_pos))
+
     return n_action, model, print_action
 
 alfa = 1 # Learning Rate
@@ -1103,7 +1129,7 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
             # region INITIALIZE VARIABLES 2
             episodes += 1
             episodes_list.append(episodes)
-            max_steps = 20
+            max_steps = 100
             steps_list.append(steps)
             steps = 0
             act_list = []
@@ -1229,21 +1255,36 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
                 state_t = update_state(h_max, v_max, agent, positivo_list, negativo_list, wall_list)
                 agent_t = agent.pos
                 ''' CHOOSE ACTION - AGENT ACT - 2'''
-                action_chosen, model, print_action = choose_action(s_alg, state_t, agent_t, model, prob)
+                action_chosen, model, print_action = choose_action(s_alg, state_t, agent_t, model, prob,steps)
+                
 
                 if set_action: action_chosen = key_action
 
                 ''' CHANGE THE WORLD - UP_ENV - 3'''
                 agent.try_move(action_chosen, wall_list)
                 act_list.append(action_chosen)
-                if s_print: print(print_action, action_chosen)
+                # if s_print: print(print_action, action_chosen)
 
                 ''' NEW STATE - S2 - 4'''
                 state_t1 = update_state(h_max, v_max, agent, positivo_list, negativo_list, wall_list)
                 agent_t1 = agent.pos
+                global explore_set
+                global explore_dict
+
                 if s_print:
-                    print('\n>>>>   Level: ' + str(episodes) + ' |  Step: ' + str(
-                        steps) + ' |  New_agent_pos: ' + str(agent.pos) + '  <<<<')
+                    # print('\n>>>>   Level: ' + str(episodes) + ' |  Step: ' + str(
+                    #     steps) + ' |  New_agent_pos: ' + str(agent.pos) + '  <<<<')
+                    pos_tuple = tuple(agent.pos)
+                    explore_set.add(pos_tuple)
+                    if pos_tuple not in explore_dict:
+                        explore_dict[pos_tuple] = 1
+                    else:
+                        explore_dict[pos_tuple] += 1
+                if steps==max_steps:
+                    print("Number of explore node: "+str(len(explore_set)))
+                    print("Explored Node postion: "+str(explore_dict))
+                    explore_set = set()
+                    explore_dict = dict()
 
                 ''' GET REWARD - 5 '''
                 # region GET REWARD AND DELETE COLLECTED OBJECT
@@ -1257,16 +1298,16 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
                         score += positive_reward
                         positivo = Class.Positivo('positivo', agent.pos[0], agent.pos[1])
                         positivo_list.remove(positivo)
-                        if s_print == True and s_server == False:
-                            print('                                 Hit the Positivo')
+                        # if s_print == True and s_server == False:
+                            # print('                                 Hit the Positivo')
                 for negativo in negativo_list:
                     if agent.pos == negativo.pos:
                         encountered += 1
                         score -= negative_reward
                         negativo = Class.Negativo('negativo', agent.pos[0], agent.pos[1])
                         negativo_list.remove(negativo)
-                        if s_print == True and s_server == False:
-                            print('                                 Hit the Negativo')
+                        # if s_print == True and s_server == False:
+                            # print('                                 Hit the Negativo')
 
                 new_score = score
                 score_list.append(score)
@@ -1287,6 +1328,8 @@ def run(s_env, s_alg, s_learn, s_load, s_print, s_auto, s_episode, s_cond_to_end
                 elif s_cond_to_end == 'only_negative' or steps > max_steps:
                     if len(negativo_list) == 0 or steps > max_steps:
                         last_move = True
+
+                
 
                 # LEARN
                 if s_learn == True:
@@ -1526,7 +1569,7 @@ Alg_list = ["QL",
             "DSRL_dist_type_near",
             "DSRL_dist_type_near_propNeg",
             "DSRL_object"]
-Alg = Alg_list[1] # Select the algorithm to be used
+Alg = Alg_list[2] # Select the algorithm to be used
 Learn = False # To update its knowledge
 Load = True # To load a learned model
 Load_path = "/Results/Train/Env_11/Train_Env_11_DSRL   02 41 20   05-05-21"
@@ -1538,7 +1581,7 @@ Auto = True # Agent moves Automatic or if False it moves by pressing the Spaceba
 Server = False # If running in the server since
 
 # change Prob to 1 for probe training??
-Prob = 0 # Probability to make a random move (exploration rate)
+Prob = 0.3 # Probability to make a random move (exploration rate)
 Cond_to_end = "max_steps" # Choose from below (there are 4)
 Save = False # Save the model
 speed = 0.05 # seconds per frame
