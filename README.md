@@ -66,6 +66,8 @@ report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au
 
 ### create conda virtual env
 ```
+source /usr/local/anaconda3/etc/profile.d/conda.sh
+
 conda create -n symbolenv python=3.6
 ```
 
