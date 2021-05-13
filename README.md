@@ -105,11 +105,11 @@ pip install keras
 pip install imageio
 
 pip install sklearn
-
 ```
 ### run the plus and minus file
 ```
 cd symblic_game/
+
 python NEW_GAME.py
 ```
 Press `G` to pause the game and plot graph. Close the graph to continue game playing.
@@ -117,5 +117,6 @@ Press `G` to pause the game and plot graph. Close the graph to continue game pla
 ### run the cross and circle file
 ```
 cd PyDSRL/
+
 python main.py
 ```
