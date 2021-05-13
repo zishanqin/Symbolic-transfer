@@ -72,9 +72,11 @@ source /usr/local/anaconda3/etc/profile.d/conda.sh
 conda create -n symbolenv python=3.6
 ```
 
-### enter virual environment
+### enter/exit virual environment
 ```
 conda activate symbolenv
+
+conda deactivate symbolenv
 ```
 
 ### install packages (!!watch out for `conda` and `pip`!!)
