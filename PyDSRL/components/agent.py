@@ -40,13 +40,14 @@ class DDQNAgent:
         self.action_size = action_size
         self.memory = deque(maxlen=2000)
         self.gamma = 0.95    # discount rate
-        self.epsilon = 1.0  # exploration rate
+        self.epsilon = 3.0  # exploration rate
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.99
         self.learning_rate = 0.001
         self.model = self._build_model()
         self.target_model = self._build_model()
         self.update_target_model()
+        # self.explore_dict = dict()
 
     def _huber_loss(self, target, prediction):
         # sqrt(1+error^2)-1
@@ -124,6 +125,12 @@ class TabularAgent:
         return np.argmax(self._total_rewards(state))  # returns action
 
     def update(self, state, action, reward, next_state, done):
+        print("----------------")
+        print("current state is :")
+        print(state)
+        print("next: ")
+        print(next_state)
+        print("----------------")
         '''Update tables based on reward and action taken'''
         curr_tr = self._total_rewards(state)
         next_tr = self._total_rewards(next_state)
@@ -152,6 +159,10 @@ class TabularAgent:
                 action_rewards += table[interaction['loc_difference']]  # add q-value arrays
             except:
                 pass
+
+        # Substract the exploration times
+        
+
         return action_rewards
 
     def _make_table(self):
