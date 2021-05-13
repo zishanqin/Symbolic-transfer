@@ -79,6 +79,8 @@ conda activate symbolenv
 
 ### install packages (!!watch out for `conda` and `pip`!!)
 ```
+(pip install gym)
+
 pip install pygame
 
 pip install pandas==0.20.3
