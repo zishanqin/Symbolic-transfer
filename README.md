@@ -79,8 +79,6 @@ conda activate symbolenv
 
 ### install packages (!!watch out for `conda` and `pip`!!)
 ```
-(pip install gym)
-
 pip install pygame
 
 pip install pandas==0.20.3
@@ -92,6 +90,21 @@ conda install matplotlib
 conda install xlsxwriter
 ```
 
+### for Copland computers
+```
+pip install gym
+
+pip install tensorflow 
+
+pip install scikit-image
+
+pip install keras
+
+pip install imageio
+
+pip install sklearn
+
+```
 ### run the file
 ```
 cd symblic_game/
