@@ -16,3 +16,12 @@ register(
     id='CrossCircle-MixedRand-v0',
     entry_point='cross_circle_gym.envs:CrossCircleMixedRand',
 )
+register(
+    id='TestCrossCircle-MixedGrid-v0',
+    entry_point='cross_circle_gym.envs:TestMixedGrid',
+)
+
+register(
+    id='TestCrossCircle-MixedRand-v0',
+    entry_point='cross_circle_gym.envs:TestMixedRand',
+)

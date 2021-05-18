@@ -19,6 +19,8 @@ from components.agent import TabularAgent #, DDQNAgent
 parser = argparse.ArgumentParser(description=None)
 parser.add_argument('env_id', nargs='?', default='CrossCircle-MixedRand-v0',
                     help='Select the environment to run')
+# parser.add_argument('env_id', nargs='?', default='TestCrossCircle-MixedGrid-v0',
+#                     help='Select the environment to run')
 parser.add_argument('--load', type=str, help='load existing model from filename provided')
 parser.add_argument('--episodes', '-e', type=int, default=1000,
                     help='number of DQN training episodes')
@@ -33,6 +35,27 @@ parser.add_argument('--save', type=str, help='save model to filename provided') 
 
 args = parser.parse_args()
 
+# Target domain settings
+parser_test = argparse.ArgumentParser(description=None)
+# parser_test.add_argument('env_id', nargs='?', default='TestCrossCircle-MixedGrid-v0',
+#                     help='Select the environment to run')
+parser_test.add_argument('env_id', nargs='?', default='TestCrossCircle-MixedRand-v0',
+                    help='Select the environment to run')
+parser_test.add_argument('--load', type=str, help='load existing model from filename provided')
+parser_test.add_argument('--episodes', '-e', type=int, default=1000,
+                    help='number of DQN training episodes')
+parser_test.add_argument('--load-train', action='store_true',
+                    help='load existing model from filename provided and keep training')
+parser_test.add_argument('--new-images', action='store_true', help='make new set of training images')
+parser_test.add_argument('--enhancements', action='store_true',
+                    help='activate own improvements over original paper')
+parser_test.add_argument('--visualize', '--vis', action='store_true',
+                    help='plot autoencoder input & output')
+parser_test.add_argument('--save', type=str, help='save model to filename provided') # e.g. --save testsave.h5
+
+args_test = parser_test.parse_args()
+
+
 TRAIN_IMAGES_FILE = 'train_images.pkl'
 NEIGHBOR_RADIUS = 25  # 1/2 side of square in which to search for neighbors
 
@@ -43,6 +66,7 @@ logger.setLevel(logger.INFO)
 
 
 env = gym.make(args.env_id)
+env_test = gym.make(args_test.env_id)
 seed = env.seed(1)[0]
 
 
@@ -92,6 +116,32 @@ if args.load_train or args.visualize or not args.load:
 if args.save:
     autoencoder.save_weights(args.save)
 
+# Target
+input_shape = images[0].shape
+if args_test.load:
+    autoencoder_test = SymbolAutoencoder.from_saved(args_test.load,
+                                               images[0].shape,
+                                               neighbor_radius=NEIGHBOR_RADIUS)
+else:
+    autoencoder_test = SymbolAutoencoder(images[0].shape, neighbor_radius=NEIGHBOR_RADIUS)
+
+if args_test.load_train or args_test.visualize or not args_test.load:
+    logger.info('Splitting sets...')
+    X_train, X_test = train_test_split(images, test_size=0.2, random_state=seed)
+    X_train, X_val = train_test_split(X_train, test_size=0.2, random_state=seed)
+
+    if args_test.load_train or not args_test.load:
+        logger.info('Training...')
+        autoencoder_test.train(X_train, epochs=10, validation=X_val)
+
+    if args_test.visualize:
+        #Visualize autoencoder
+        vis_imgs = X_test[:10]
+        autoencoder_test.visualize(vis_imgs)
+
+if args_test.save:
+    autoencoder_test.save_weights(args_test.save)
+
 
 # entities, found_types = autoencoder.get_entities(X_test[0])
 
@@ -110,15 +160,16 @@ done = False
 batch_size = 32
 time_steps = 100
 
-for e in range(args.episodes):
+# Formal train
+for e in range(args_test.episodes):
     state_builder.restart()
-    state = env.reset()
+    state = env_test.reset()
     state = np.reshape(state, input_shape)
     state = state_builder.build_state(*autoencoder.get_entities(state))
     for time in range(time_steps):
-        env.render(wait=0.01)
+        env_test.render(wait=0.01)
         action = agent.act(state)
-        next_state, reward, done, _ = env.step(action)
+        next_state, reward, done, _ = env_test.step(action)
         next_state = np.reshape(next_state, input_shape)
         next_state = state_builder.build_state(*autoencoder.get_entities(next_state))
         # next_state = np.reshape(next_state, [1, state_size])
