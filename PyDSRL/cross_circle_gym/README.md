@@ -12,3 +12,4 @@ Environments:
 Innovated new environments:
     
     TestCrossCircle-MixedGrid-v0
+    TestCrossCircle-MixedRand-v0
