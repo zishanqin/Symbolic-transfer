@@ -65,6 +65,10 @@ report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au
 
 ## Installation
 
+### Enter GPU
+```
+ssh uID@stugpu2.anu.edu.au
+```
 ### create conda virtual env
 ```
 source /usr/local/anaconda3/etc/profile.d/conda.sh
