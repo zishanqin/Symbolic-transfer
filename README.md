@@ -96,7 +96,7 @@ conda install matplotlib
 conda install xlsxwriter
 ```
 
-### for Copland computers
+### for Copland computers (should be run inside the vscode terminal)
 ```
 pip install gym
 
