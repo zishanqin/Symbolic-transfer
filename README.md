@@ -124,3 +124,9 @@ cd PyDSRL/
 
 python main.py
 ```
+### Solve error for cross and circle file
+```
+pip list | grep tf
+
+pip install tensorflow --upgrade --force-reinstall
+```
