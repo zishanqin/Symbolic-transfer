@@ -9,7 +9,7 @@ Environments:
     CrossCircle-NegRand-v0
     CrossCircle-MixedRand-v0
     
-Innovated new environments:
+Innovated new environments by Taylor and Wei:
     
     TestCrossCircle-MixedGrid-v0
     TestCrossCircle-MixedRand-v0
