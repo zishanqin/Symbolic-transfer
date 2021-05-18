@@ -8,3 +8,7 @@ Environments:
     CrossCircle-MixedGrid-v0
     CrossCircle-NegRand-v0
     CrossCircle-MixedRand-v0
+    
+Innovated new environments:
+    
+    TestCrossCircle-MixedGrid-v0
