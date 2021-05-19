@@ -1,28 +1,32 @@
 '''Main module for the paper's algorithm'''
 #pylint:disable=C0103,R0913
 import argparse
+from collections import deque
+import json
 import os.path
 import pickle
 import numpy as np
 import math
+import tqdm
 
 import gym
 from gym import logger
 from numpy.ma.core import left_shift, right_shift
 from sklearn.model_selection import train_test_split
+import tensorflow as tf
 
 #pylint:disable=W0611
 import cross_circle_gym
 #pylint:enable=W0611
 from components.autoencoder import SymbolAutoencoder
 from components.state_builder import StateRepresentationBuilder
-from components.agent import TabularAgent #, DDQNAgent
+from components.agent import TabularAgent, DSRLAgent #, DDQNAgent
 
 parser = argparse.ArgumentParser(description=None)
 parser.add_argument('env_id', nargs='?', default='CrossCircle-MixedRand-v0',
                     help='Select the environment to run')
 parser.add_argument('--load', type=str, help='load existing model from filename provided')
-parser.add_argument('--episodes', '-e', type=int, default=100,
+parser.add_argument('--episodes', '-e', type=int, default=1000,
                     help='number of DQN training episodes')
 parser.add_argument('--load-train', action='store_true',
                     help='load existing model from filename provided and keep training')
@@ -91,7 +95,7 @@ if args.load_train or args.visualize or not args.load:
 
     if args.load_train or not args.load:
         logger.info('Training...')
-        autoencoder.train(X_train, epochs=10, validation=X_val)
+        autoencoder.train(X_train, epochs=50, validation=X_val)
 
     if args.visualize:
         #Visualize autoencoder
@@ -121,7 +125,9 @@ action_size = env.action_space.n
 
 
 # agent = TabularAgent.from_saved("./tab_agent.h5", action_size)
-agent = TabularAgent(action_size)
+# agent = TabularAgent(action_size, alpha=0.01, epsilon_decay=0.99995)
+# agent = TabularAgent.from_saved("./tab_agent.h5", action_size)
+agent = DSRLAgent()
 # -------- load the saved agent model --------
 done = False
 batch_size = 32
@@ -133,13 +139,13 @@ time_steps = 100
 
 # --------- probe policy ---------
 #  TODO: Plug in the probe action function for probe episodes
-#  
+#
 TYPES = {}
 
 def update_types(entities, reward, types):
     for entity in entities:
         overlap = (entity.position[0] - env.agent.centre()[0]) * (entity.position[1] - env.agent.centre()[1])
-        if (overlap < 15):
+        if (overlap < 25):
             if entity.entity_type in types:
                 types[entity.entity_type] += reward
             else:
@@ -154,9 +160,10 @@ def env_step(action, entities, types):
     return types
 
 
-PROBE_EPO = 10
+
+PROBE_EPO = 0
 # ----------- identify TYPES -----------
-for e in range(PROBE_EPO):
+for e in tqdm.tqdm(range(PROBE_EPO)):
     state_builder.restart()
     state = env.reset()
     state = np.reshape(state, input_shape)
@@ -174,8 +181,8 @@ for e in range(PROBE_EPO):
             action = 1 # right
         for x in range(abs(x_step)):
             TYPES = env_step(action, typed_entities, TYPES)
-            env.render(wait=0.1)
-        
+            # env.render(wait=0.1)
+
         # step up |
         if y_step < 0:
             action = 2 # up
@@ -183,39 +190,51 @@ for e in range(PROBE_EPO):
             action = 0 # down
         for x in range(abs(y_step)):
             TYPES = env_step(action, typed_entities, TYPES)
-            env.render(wait=0.1)
+            # env.render(wait=0.1)
 
         # print([env.agent.left, env.agent.top])
 
+print(TYPES)
+# TYPES = {} finalised
+for etype in TYPES:
+    if TYPES[etype] > 0:
+        TYPES[etype] = 'type1'
+    elif TYPES[etype] < 0:
+        TYPES[etype] = 'type2'
+    elif TYPES[etype] == 0:
+        TYPES[etype] = 'type3'
 
-# types = {} finalised
 
 
 
+# SAVE types dictionary into json file
+# a_file = open("types.json", "w")
+# json.dump(TYPES, a_file)
+# a_file.close()
 
-# # ----------- train the agent with the autoencoder --------
+# READ types dictrionay from json file
+# TYPES = json.load(open("types.json"))
+print(TYPES)
+
+
+# ----------- train the agent with the autoencoder --------
 # for e in range(args.episodes):
 #     state_builder.restart()
 #     state = env.reset()
 #     state = np.reshape(state, input_shape)
 #     state = state_builder.build_state(*autoencoder.get_entities(state))
-#     i = 0
 #     score = 0
 #     for time in range(time_steps):
 
 #         # update the environment
-#         env.render(wait=0.000000001)
-#         action = agent.act(state)
+#         env.render(wait=0.001)
+#         action = agent.act(state, random_act=False)
 #         next_state, reward, done, _ = env.step(action)
 #         score += reward
 
-#         if(reward != 0):
-#             types = update_types(state_builder.tracked_entities, reward, types)
-#             print(types)
-
-
 #         # update the state representative by the symbolic representation
 #         next_state = np.reshape(next_state, input_shape) # make it to img
+#         # next_state = state_builder.build_state(*autoencoder.get_entities_new(next_state, TYPES))
 #         next_state = state_builder.build_state(*autoencoder.get_entities(next_state))
 #         agent.update(state, action, reward, next_state, done)
 #         # print(state_builder.type_transition_matx.index)
@@ -232,3 +251,68 @@ for e in range(PROBE_EPO):
 #     #     agent.replay(batch_size)
 #     if e % 10 == 0:
 #         agent.save('tab_agent.h5')
+
+
+
+
+number_of_evaluations = 0
+buffered_rewards = deque(maxlen=200)
+summary_writer = tf.summary.create_file_writer('./logs')
+
+
+for e in tqdm.tqdm(range(args.episodes)):
+    state_builder.restart()
+    state = env.reset()
+    state = state_builder.build_state(*autoencoder.get_entities(state))
+    total_reward = 0
+    estate = state_builder.tracked_entities
+
+    for t in range(time_steps):
+        env.render(wait=0.001)
+        # action = agent.act(state)
+        action = agent.act(entities=estate, s_prob=0.3)
+        next_state, reward, done, _ = env.step(action)
+        total_reward += reward
+
+        next_state = state_builder.build_state(*autoencoder.get_entities(next_state))
+        next_estate = state_builder.tracked_entities
+        agent.update(estate, action, next_estate, reward, env.agent.centre(), done)
+        # agent.update(state, action, reward, next_state, done)
+        state = next_state
+
+        if done:
+            print("Total reward of this ep:", total_reward)
+            break
+
+    buffered_rewards.append(total_reward)
+
+    with summary_writer.as_default():
+        tf.summary.scalar('Averaged Reward',np.mean(buffered_rewards),e)
+        tf.summary.scalar('Epsilon',agent.epsilon,e)
+
+    if e % 50 == 0:
+        number_of_evaluations += 1
+        # agent.save('tab_agent.h5')
+        evaluation_reward = []
+        with summary_writer.as_default():
+            for i in range(10):
+                done = False
+                state_builder.restart()
+                image = env.reset()
+                state = state_builder.build_state(*autoencoder.get_entities(image, TYPES))
+                estate = state_builder.tracked_entities
+                total_reward = 0
+                for t in range(time_steps):
+                    env.render(wait=0.001)
+                    action = agent.act(estate, 0, random_act=False)
+                    # action = agent.act(state,random_act=False)
+                    next_image, reward, done, _ = env.step(action)
+                    if i==0:
+                        tf.summary.image(f'Agent Behaviour {number_of_evaluations}',np.reshape(image,(1,)+image.shape),t)
+                    total_reward += reward
+                    next_state = state_builder.build_state(*autoencoder.get_entities(next_image))
+                    state = next_state
+                    image = next_image
+                evaluation_reward.append(total_reward)
+
+            tf.summary.scalar('Evaluation Reward',np.mean(evaluation_reward),number_of_evaluations)
