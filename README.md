@@ -1,4 +1,4 @@
-# Generative adversarial transfer learning for symbolic representation in DRL
+# Symbolic Transfer in Games in DRL
 ### Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
 Tut W10: https://youtu.be/i5gWM5KYeR8<br>
