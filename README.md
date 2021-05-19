@@ -110,6 +110,8 @@ pip install keras
 pip install imageio
 
 pip install sklearn
+
+pip install tqdm
 ```
 ### run the plus and minus file
 ```
