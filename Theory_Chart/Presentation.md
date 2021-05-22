@@ -4,27 +4,26 @@ Hi, everyone! Here is group **num**. <br>
 I am Taylor Qin, today I am going to present our project, **Symbolic Transfer in Games in Deep Reinforcement Learning**, to you. <br>
 Our team members are Junming, Wei, and me. And this project was supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
-The goal of our project is to tranfer the knowledge we have gained, from the game on the left, to the one on the right. <br>
-The original game wants to hit as many 'plus' objects as possible, and to avoid the 'triangles'. <br>
-We aim to find an efficient way to reuse the training experience, in a new game, where the positive and negative objects are replaced into new symbols, crosses and circles on the right.<br>
+The **goal of our project** is to **tranfer the knowledge** , from the game on the left, to the game on the right. <br>
+The original game wants to hit as many **'plus' objects** as possible, avoiding the 'triangles'. <br>
+We aim to find an **efficient** way to **reuse** the training experience, in a new game, where the positive and negative objects are **replaced** into new symbols, crosses and circles.<br>
 ### Slide 3: <br>
 So why is our project interesting? <br>
-Well it's because we integrate the symbolic extraction idea in transfer learning.<br>
-Transfer learning could reuse previous knowledge, so we need less data and training time, and better modelling performance.<br>
-Furthermore, since we're processing symbols instead of pixels, the auto symbolic extraction also brings us the benefits in spatial complexity, applicability, interpretability, and even a certain denoising effect.  <br>
+Well it's because we **integrate** the symbolic extraction idea in **transfer learning**.<br>
+Transfer learning could **reuse** previous knowledge, so we need **less data**, **less training time**, and **better modelling performance**.<br>
+Furthermore, since we're processing **symbols** instead of image pixels, the **auto symbolic extraction** also brings us the benefits in **spatial complexity, applicability, interpretability**, and even a certain **denoising** effect.  <br>
 ### Silde 4: <br>
-So this is the structure of our method. <br>
-We mainly have two innovative ideas: an unsupervised auto-encoder to extract auto-types from the image pixels, and a few-shot probing strategy to classify the auto-types into pos. and neg. symbols. <br>
-Thus, we represent different games in one symbolic latent space, so that previous knowledge can be transferred and reused.<br>
+So this is the **structure** of our method. <br>
+We mainly have two **innovative ideas**: an **unsupervised** auto-encoder to extract **auto-types** from the image pixels, and a few-shot **probing** strategy to classify the auto-types into pos. and neg. symbols. <br>
+Thus, we represent different games in **one symbolic** latent space, so that previous knowledge can be transferred and reused.<br>
 ### Slide 5: <br>
-This is our experimental result on 500 episodes. <br>
-The light blue line represents our transfer method's result.<br> 
-Comparing to the other three lines, it achieved higher cummulated reward at early episodes, showing that our transferred knowledge did accelerate the learning. <br>
-Comparing the dark blue line, to the orange one, even though both are trained from scratch, classification by probing clearly obtained a better performance. <br>
-However, our performance was not yet stable at the moment.<br> 
+This is our result in the first 500 episodes, although it is not yet converged. <br>
+The **cyan** (si-an) line represents our **transfer** method's result.<br> 
+Comparing to the other three lines, it achieved **higher** cummulated reward **at early** episodes, showing that our **transferre**d knowledge **did** accelerate the learning. <br>
+Comparing the **dark** blue line, to the **orange** one, even though both are trained from **scratch**, classification by probing clearly obtained a better performance. <br>
 ### Slide 6: <br>
 Well, that's all of the introduction for our project.<br> 
-If you're interested, please come to our tutorial presentation on wednesday 3-5pm.<br>
+If you're **interested**, please come to our tutorial presentation on wednesday 3-5 in the afternoon.<br>
 Thank you for your attention. <br>
 
 
