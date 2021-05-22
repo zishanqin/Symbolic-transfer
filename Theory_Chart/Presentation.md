@@ -5,8 +5,8 @@ Our team members are xx, xx, and me. <br>
 We are team **num**. 
 Our project is Symbolic Transfer in Games in Deep Reinforcement Learning, supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
-The goal of our project is to tranfer the knowledge we have gained from the game on the left to the one on the right. <br>
-The original game wants to hit as many 'plus' objects as possible, and at the same time, avoiding the 'triangles'. <br>
+The goal of our project is to tranfer the knowledge we have gained from the game on the left, to the one on the right. <br>
+The original game wants to hit as many 'plus' objects as possible, and to avoid the 'triangles'. <br>
 We aims to find a good way for reusing the experience we gained into a new game, where the positive and negative obejcts are replaced into new symbols, crosses and circles.<br>
 ### Slide 3: <br>
 Why is our project interesting? <br>
