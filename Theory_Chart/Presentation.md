@@ -17,7 +17,7 @@ So this is the **structure** of our method. <br>
 We mainly have two **innovative ideas**: an **unsupervised** auto-encoder to extract **auto-types** from the image pixels, and a few-shot **probing** strategy to classify the auto-types into pos. and neg. symbols. <br>
 Thus, we represent different games in **one symbolic** latent space, so that previous knowledge can be transferred and reused.<br>
 ### Slide 5: <br>
-This is our result in the first 500 episodes, although it is not yet converged. <br>
+This is our result in the first 500 episodes, although it is not yet converged. Sorry about that. <br>
 The **cyan** (si-an) line represents our **transfer** method's result.<br> 
 Comparing to the other three lines, it achieved **higher** cummulated reward **at early** episodes, showing that our **transferre**d knowledge **did** accelerate the learning. <br>
 Comparing the **dark** blue line, to the **orange** one, even though both are trained from **scratch**, classification by probing clearly obtained a better performance. <br>
