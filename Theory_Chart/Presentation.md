@@ -2,6 +2,9 @@ Silde 1:<br>
 Hi, everyone! I am xxx, today I am going to present our project to you. We are a team of three girls, our team members are xx, xx, and me. Our project is called Symbolic Transfer in Games in Deep Reinforcement Learning, supervised by Katya.<br>
 Slide 2: <br>
 Let me introduce the main idea of our project: the aim of our project is to tranfer the knowledge we have gained from one game, which is on the left, to the game on the right. As you can see it, the original game on the left wants to hit as many 'plus' objects as possible, and at the same time, avoiding the 'triangles', which represent the obstacles. We want to figure out a good way for utilizing the experience we gained from the original game into the new game, where the positive and negative obejcts are replaced into totally new symbols, crosses and circles.<br>
-Silde 3: <br>
+Slide 3: <br>
+This research is very important because 
+Silde 4: <br>
 That's why we introduce a novel method, combining the advantages of unsupervised symbol extraction and the optimized probing strategy at the start of the training. Initially, we apply the auto-encoder to extract symbols from the pixels of the game image from both the source domain and the target domain. That's when we get a first version of the types according to their positions and pixel values. Afterwards, we let our agent go along some trajectories on the game, generating the corresponding rewards. Based on the rewards, we classify the types into two main types. Type 1 stands for positive reward for positive objects and type 2 for negative reward. And we train the original policy on the two types, and play the game according to our generated trajectory.<br>
 Slide 4: <br>
+The result turned out to be pretty good, proving that our proposed method to be useful.
