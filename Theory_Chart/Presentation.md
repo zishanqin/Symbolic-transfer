@@ -32,4 +32,20 @@ Thank you for your attention. <br>
 
 
 # Tutorial
+### Slide 1: <br>
+Hi, everyone! I am xxx, today I am going to present our project to you. <br>
+Our team members are xx, xx, and me. <br>
+Our reseach topic is Symbolic Transfer in Games in Deep Reinforcement Learning, supervised by Katya. Thank you Katya.<br>
+### Slide 2: <br>
+So let's have a look at the game that we are using for the project. The game rule is to hit as many as positive object as possible, while avoiding the negative objects. 指ppt上的 Agent，Postive 和 Negative.<br> 介绍正负reward。
+### Slide 3: <br>
+So that's our game. what's the goal of our project??<br>
+We aim to transfer between games with simialr rules but different symbols.<br>
+Here is our source domain where the postive object is "plus" and negetive object is "triangle".<br>
+Here is our target domain where the postive object is "cross" and negetive object is "circle".<br>
+Our goal is to find an effective transfer method such that once the agent develeops the strategy to gain more reward in source domain, we can reuse the strategy in the target domain. Where the target domain has different symbol representation.  
+### Slide 4: <br>
+
+
+
 That's why we introduce a novel method, combining the advantages of unsupervised symbol extraction, and the optimized probing strategy. Initially, we apply the auto-encoder to extract symbols from the pixels of the game images. That's when we get the auto-types according to their positions and pixel values. After that, we let our agent go along some trajectories on the game, generating the corresponding rewards. Based on the rewards, we classify the types into two main types, one with positive reward and the other with negative reward. And we train the original policy on the two types, and play the game according to our generated trajectory.
