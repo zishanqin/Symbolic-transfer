@@ -24,7 +24,7 @@ Comparing to the other three lines, it achieved higher cummulated reward at earl
 Comparing the dark blue line, to the orange one, even though both are trained from scratch, classification by probing clearly obtained a better performance. <br>
 However, our performance was not yet stable at the moment.<br> 
 ### Slide 6: <br>
-Well, that's all the introduction for our project.<br> 
+Well, that's all of the introduction for our project.<br> 
 If you're interested, please come to our tutorial presentation on wednesday 3-5pm.<br>
 Thank you for your attention. <br>
 
