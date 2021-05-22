@@ -1,6 +1,6 @@
 # Symbolic Transfer in Games in DRL
 ### Presentataion edit link
-https://anu365-my.sharepoint.com/:p:/g/personal/u6808226_anu_edu_au/ETdVUCLXazJIk4AZxq4LVMoBocVdZFke5_8D9wQyWCmDjg?e=VeRJtf <br>
+https://anu365-my.sharepoint.com/:p:/g/personal/u6808226_anu_edu_au/EUJQUnCPpvBBlUbb6xu6IaUBPHdAIQZJg5Z8q_2pHlsjhg?e=AkYXLM <br>
 
 ### Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
