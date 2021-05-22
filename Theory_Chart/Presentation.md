@@ -4,7 +4,7 @@ Hi, everyone! Here is group **num**. <br>
 I am Taylor Qin, today I am going to present our project, Symbolic Transfer in Games in Deep Reinforcement Learning, to you. <br>
 Our team members are Junming, Wei, and me. And this project was supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
-The goal of our project is to tranfer the knowledge we have gained from the game on the left, to the one on the right. <br>
+The goal of our project is to tranfer the knowledge we have gained, from the game on the left, to the one on the right. <br>
 The original game wants to hit as many 'plus' objects as possible, and to avoid the 'triangles'. <br>
 We aim to find an efficient way to reuse the experience we gained before, in a new game, where the positive and negative obejcts are replaced into new symbols, crosses and circles on the right.<br>
 ### Slide 3: <br>
