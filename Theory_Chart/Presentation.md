@@ -2,7 +2,7 @@
 ### Silde 1:<br>
 Hi, everyone! I am xxx, today I am going to present our project to you. <br>
 Our team members are xx, xx, and me. <br>
-We are team **num**. 
+We are group **num**. 
 Our project is Symbolic Transfer in Games in Deep Reinforcement Learning, supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
 The goal of our project is to tranfer the knowledge we have gained from the game on the left, to the one on the right. <br>
