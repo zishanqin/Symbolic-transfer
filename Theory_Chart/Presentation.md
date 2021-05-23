@@ -18,7 +18,7 @@ so we need less **data and training time** for a **better performance**.<br>
 Furthermore, since we're processing **symbols** instead of image pixels, <br>
 symbolic extraction also brings us benefits, <br>
 in **readability, spatial complexity, and applicability**. <br>
-And it works better with noise.  <br>
+And it also works well with noise.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
 We mainly have **two** innovative ideas: <br>
