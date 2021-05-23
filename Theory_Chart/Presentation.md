@@ -35,7 +35,7 @@ even though both are trained from **scratch**, <br>
 classification clearly obtained a **better** performance. <br>
 ### Slide 6: <br>
 Well, that's all of the introduction for our project.<br> 
-If you're **interested**, please come to our tutorial presentation on wednesday 3-5 in the afternoon.<br>
+If you're **interested**, please come to our tutorial presentation on wednesday 3-5pm in the afternoon.<br>
 Thank you for your attention. <br>
 
 
