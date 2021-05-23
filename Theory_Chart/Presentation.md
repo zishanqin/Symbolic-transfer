@@ -17,10 +17,7 @@ Transfer learning could **reuse** previous knowledge, so we need **less data**, 
 and **better performance**.<br>
 Furthermore, since we're processing **symbols** instead of image pixels, <br>
 symbolic extraction also brings us the benefits in **readability, spatial complexity, and applicability**. <br>
-And works better with noise.  <br>
-Furthermore, since we're processing **symbols** instead of image pixels, <br>
-symbolic extraction gives us **less spatial complexity, better applicability, better interpretability**, <br>
-and works better with noise.  <br>
+And it works better with noise.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
 We mainly have **two** innovative ideas: <br>
