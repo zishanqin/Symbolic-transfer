@@ -16,7 +16,7 @@ Well it's because we **integrate** the auto symbolic extraction idea in **transf
 Transfer learning could **reuse** previous knowledge, so we need **less data**, **less training time**, <br>
 and **better modelling performance**.<br>
 Furthermore, since we're processing **symbols** instead of image pixels, <br>
-the symbolic extraction also brings us the benefits in **spatial complexity, applicability, interpretability**, <br>
+symbolic extraction brings us the benefits in **spatial complexity, applicability, interpretability**, <br>
 and works better with noise.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
