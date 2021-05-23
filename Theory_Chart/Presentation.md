@@ -14,7 +14,7 @@ crosses and circles.<br>
 So why is our project interesting? <br>
 Well it's because we **integrate** the auto symbolic extraction idea in **transfer learning**.<br>
 Transfer learning could **reuse** previous knowledge, so we need **less data**, **less training time**, <br>
-and **better modelling performance**.<br>
+and **better performance**.<br>
 Furthermore, since we're processing **symbols** instead of image pixels, <br>
 symbolic extraction also brings us the benefits in **spatial complexity, applicability, readability**, <br>
 and works better with noise.  <br>
