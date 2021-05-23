@@ -20,9 +20,11 @@ the **auto symbolic extraction** also brings us the benefits in **spatial comple
 and even a certain **denoising** effect.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
-We mainly have two **innovative ideas**: an **unsupervised** auto-encoder to extract **auto-types** from the image pixels, <br>
-and a few-shot **probing** strategy to classify the auto-types into pos. and neg. symbols. <br>
-Thus, we represent different games in **one symbolic** latent space, so that previous knowledge can be transferred and reused.<br>
+We mainly have **two** innovative ideas: <br>
+first, an **unsupervised** auto-encoder to extract **auto-types** from the image pixels; <br>
+The second one is a few-shot **probing** strategy to classify the **auto-types** into pos. and neg. symbols. <br>
+Thus, we represent different games in **one symbolic** latent space, <br>
+so that previous knowledge can be transferred and reused.<br>
 ### Slide 5: <br>
 This is our result in the first 500 episodes, although it is not yet converged. <br>
 The **cyan** (si-an) line represents our **transfer** method's result.<br> 
