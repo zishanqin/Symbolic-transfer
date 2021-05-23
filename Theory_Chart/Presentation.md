@@ -1,6 +1,6 @@
 ## Lecture Pres.
 ### Silde 1:<br>
-Hi, everyone! Here is group **num**. <br>
+Hi, everyone! Here is group **14**. <br>
 I am Taylor Qin, today I am going to present our project, **Symbolic Transfer in Games in Deep Reinforcement Learning**, to you. <br>
 Our team members are Junming, Wei, and me. And this project was supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
