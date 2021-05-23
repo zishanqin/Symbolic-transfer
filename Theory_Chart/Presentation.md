@@ -21,7 +21,7 @@ This is our result in the first 500 episodes, although it is not yet converged. 
 The **cyan** (si-an) line represents our **transfer** method's result.<br> 
 Comparing to the other three lines, it achieved **higher** cummulated reward **at early** episodes. <br>
 It indicates that our **transferre**d knowledge **did** accelerate the learning. <br>
-Comparing the **dark** blue line, to the **orange** one, even though both are trained from **scratch**, classification clearly obtained a better performance. <br>
+Comparing the **dark** blue line, to the **orange** one, even though both are trained from **scratch**, classification clearly obtained a **better** performance. <br>
 ### Slide 6: <br>
 Well, that's all of the introduction for our project.<br> 
 If you're **interested**, please come to our tutorial presentation on wednesday 3-5 in the afternoon.<br>
