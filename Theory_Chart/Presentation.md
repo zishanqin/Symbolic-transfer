@@ -22,8 +22,8 @@ And it works better with noise.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
 We mainly have **two** innovative ideas: <br>
-The first one is an **unsupervised** auto-encoder to get **auto-types** from the image pixels; <br>
-The second one is a few-shot **probing** strategy to classify the **auto-types** into pos. and neg. symbols. <br>
+One is an **unsupervised** auto-encoder to get **auto-types** from the image pixels; <br>
+The other one is a few-shot **probing** strategy to classify the **auto-types** into pos. and neg. symbols. <br>
 Therefore, we represent different games in **one symbolic** latent space, <br>
 so that previous knowledge can be transferred and reused.<br>
 ### Slide 5: <br>
