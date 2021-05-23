@@ -28,9 +28,9 @@ to classify the **auto-types** into pos. and neg. symbols. <br>
 Therefore, we represent different games in **one symbolic** latent space, <br>
 so that previous knowledge can be **transferred** and reused.<br>
 ### Slide 5: <br>
-This is our result in the first 500 episodes, although it is not yet converged. <br>
+This is our result in the first 500 episodes, although it is not yet stable. <br>
 The **cyan** (si-an) line represents our **transfer** method's result.<br> 
-Comparing to the other three lines, it achieved **higher** reward **at early** episodes. <br>
+Comparing to the rest, it achieved **higher** reward **at early** episodes. <br>
 It indicates that our **transferre**d knowledge **did** accelerate the learning. <br>
 Comparing the **dark** blue line, to the **orange** one, <br>
 even though both are trained from **scratch**, <br>
