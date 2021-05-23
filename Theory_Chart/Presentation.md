@@ -32,7 +32,7 @@ This is our result in the first 500 episodes, although it is still unstable. <br
 The **cyan** (si-an) line represents our **transfer** method's result.<br> 
 Comparing to the rest, it achieved **higher** reward at **early** episodes. <br>
 It indicates that our **transferred** knowledge **did** accelerate the learning. <br>
-Also, if we compare the **dark** blue line, to the **orange** one, <br>
+Also, if we compare the **dark** blue line, with the **orange** one, <br>
 we can see that, even though both are trained from **scratch**, <br>
 classification clearly obtained a **better** performance. <br>
 ### Slide 6: <br>
