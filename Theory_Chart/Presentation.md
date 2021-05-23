@@ -17,7 +17,7 @@ Transfer learning could **reuse** previous knowledge, so we need **less data**, 
 and **better modelling performance**.<br>
 Furthermore, since we're processing **symbols** instead of image pixels, <br>
 the **auto symbolic extraction** also brings us the benefits in **spatial complexity, applicability, interpretability**, <br>
-and even a certain **denoising** effect.  <br>
+and works better with noise.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
 We mainly have **two** innovative ideas: <br>
