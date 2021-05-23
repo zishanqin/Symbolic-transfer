@@ -33,8 +33,8 @@ The **cyan** (si-an) line represents our **transfer** method's result.<br>
 Comparing to the rest, it achieved **higher** reward at **early** episodes. <br>
 It shows that our **transferred** knowledge **did** accelerate the learning. <br>
 Also, if we compare the **dark** blue line, with the **orange** one, <br>
-we can see that, even though both are trained from **scratch**, <br>
-classification clearly obtained a **better** performance. <br>
+we can see that even though both are trained from **scratch**, <br>
+classification had a **better** performance. <br>
 ### Slide 6: <br>
 Well, that's all of the introduction for our project.<br> 
 If you're **interested**, please come to our tutorial presentation on wednesday 3-5pm in the afternoon.<br>
