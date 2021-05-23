@@ -4,14 +4,18 @@ Hi, everyone! Here is group **14**. I am Taylor.<br>
 Today I am going to present our project, **Symbolic Transfer in Games** in Deep Reinforcement Learning, to you. <br>
 Our team members are Junming, Wei, and me. And this project was supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
-The **goal of our project** is to **tranfer the knowledge** , from the game on the left, to the game on the right. <br>
-The original game wants to hit as many **'plus' objects** as possible, avoiding the 'triangles'. <br>
-We aim to find an **efficient** way to **reuse** the training experience, in a new game, where the positive and negative objects are **replaced** into new symbols, crosses and circles.<br>
+The **goal of our project** is to **tranfer the knowledge** , from the game on the left, <br>
+to the game on the right. <br>
+The original game wants to hit as many **'plus' objects** as possible, while avoiding the 'triangles'. <br>
+We aim to find an **efficient** way to **reuse** the training experience, in a new game, <br>
+where the positive and negative objects are **replaced** into new symbols, <br>
+crosses and circles.<br>
 ### Slide 3: <br>
 So why is our project interesting? <br>
 Well it's because we **integrate** the symbolic extraction idea in **transfer learning**.<br>
 Transfer learning could **reuse** previous knowledge, so we need **less data**, **less training time**, and **better modelling performance**.<br>
-Furthermore, since we're processing **symbols** instead of image pixels, the **auto symbolic extraction** also brings us the benefits in **spatial complexity, applicability, interpretability**, and even a certain **denoising** effect.  <br>
+Furthermore, since we're processing **symbols** instead of image pixels, <br>
+the **auto symbolic extraction** also brings us the benefits in **spatial complexity, applicability, interpretability**, and even a certain **denoising** effect.  <br>
 ### Silde 4: <br>
 So this is the **structure** of our method. <br>
 We mainly have two **innovative ideas**: an **unsupervised** auto-encoder to extract **auto-types** from the image pixels, and a few-shot **probing** strategy to classify the auto-types into pos. and neg. symbols. <br>
