@@ -1,7 +1,7 @@
 ## Lecture Pres.
 ### Silde 1:<br>
-Hi, everyone! Here is group **14**. <br>
-I am Taylor. Today I am going to present our project, **Symbolic Transfer in Games** in Deep Reinforcement Learning, to you. <br>
+Hi, everyone! Here is group **14**. I am Taylor.<br> 
+Today I am going to present our project, **Symbolic Transfer in Games** in Deep Reinforcement Learning, to you. <br>
 Our team members are Junming, Wei, and me. And this project was supervised by Katya. Thank you Katya.<br>
 ### Slide 2: <br>
 The **goal of our project** is to **tranfer the knowledge** , from the game on the left, to the game on the right. <br>
