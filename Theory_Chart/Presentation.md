@@ -63,3 +63,6 @@ That's why we introduce a novel method, combining the advantages of unsupervised
 
 ### Denoising
 If the number of neurons in the middle layer is less than the number of neurons in the input layer, the network extracts the more effective information. The middle layer will not have any other option but to learn the most important image patterns, ignoring the noises.
+
+<br>
+Initially, we apply the auto-encoder to extract symbols from the pixels of the game images. That's when we get the auto-types according to their positions and pixel values. After that, we let our agent go along some trajectories on the game, generating the corresponding rewards. Based on the rewards, we classify the types into two main types, one with positive reward and the other with negative reward. And we train the original policy on the two types, and play the game according to our generated trajectory.
