@@ -12,7 +12,8 @@ What our project is, what method we used, how we did the experiment and some dis
 
 ### Slide 3: <br>
 So let's have a look at the game that we are using for the project.
-The game rule is to hit as many positive object as possible, while avoiding the negative objects. 指ppt上的 Agent，Postive 和 Negative.<br> 介绍正负reward。
+We have our agent here in the middle of our game, our agent can move aound. 
+The game rule is to hit as many positive object as possible, while avoiding the negative objects. Hit a positive object , we can gain one more score, but hit negative object , we would lose one score. <br> 
 
 
 ### Slide 4: <br>
@@ -40,8 +41,9 @@ For example in this project we let the agent reuse the Q-value table,
 so in the target task we have this Q-value table for the agent already,
 and no need to train from the scratch.
 
-Therefore we need less training time and less training data for the target task.
-And this allows achieve a good result at early training stage.
+Therefore we need less training time and less training data since we have Q-value table.
+In the target domain, our task essentially change from training from scrach to adapting previous knowledgage. 
+And this allows us to achieve a good result at early training stage.
 We can train further to improve the performance.
 
 
