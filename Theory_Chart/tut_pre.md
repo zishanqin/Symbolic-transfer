@@ -80,17 +80,22 @@ Now we can just reuse the policy from the source game.
 
 
 ### Slide 9
-So now let's have a look at how it actually works.
+let's step through the structure. We first have a look what the auto-encoder does.
 
 
 ### Slide 10
-Here is what the auto-encoder does. It first encode some major features from the image,
+For the auto-encoder, it first encode some major features from the image,
 and then reconstruct from the encoded information.
 We get the auto-types and their coordinates out of this procedure.
 
 
 ### Slide 11
-That's what we get, on the right hand side, just some auto-types with the coordinates.
+That's what we get, on the right hand side, just some auto-types with the coordinates, out of one image.
+We compressed the information of one image into these auto-types.
+
+Now imagine you are an agent and you want to learn the environment, the left-hand side would be much more complicated,
+It has a matrix of 84*84*3, which is a lot of information.
+
 Compared to the pixels, the input for the agent is much less, for each step of the learning and decision making.
 
 
