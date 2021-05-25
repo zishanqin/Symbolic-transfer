@@ -177,7 +177,8 @@ And our classification method is also successful.
 
 We have a few drawbacks of our experiment though:
 we probably didn't train the agent long enough, so the result is not stable or converging yet.
-And we were also doing the experiment on the grid setup only.
+And also, we were doing the experiment on the grid setup only. 
+Where the distribution of the symbols are regular, but not a random distribution.
 
 
 ### Slide 23
