@@ -61,10 +61,9 @@ And symbols are much easier for human to understand. We can understand the strad
 
 Symbol extraction also has some denoising effect.
 Because symbolic extraction outputs the most significant features (or types), then the noise would be filtered out.
-
+That was about the overview of our project, Now my team member junming will talk about what methos we use.
 
 ### Slide 8
-That was about the overview of our project,
 Now let's have a look at what method we used to achieve our goal in the project.
 
 This is the structure of what we've done.
