@@ -101,8 +101,12 @@ for each step of the learning and decision making.
 
 
 ### Slide 12
-And here is the denoising effect.
-If we add some random noise at the corner here, the auto-encoder would filter them out when extracting the symbols.
+And here is the denoising effect of the auto-encoder.
+We added some random noise at the left-bottom corner here.
+
+As we can see on the right, after the extraction, we no-long have noise.
+It's because the auto-encoder only extracts the most significant features out of an image,
+therefore the noise would be filtered out.
 
 
 ### Slide 13
