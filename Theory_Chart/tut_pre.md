@@ -61,7 +61,7 @@ And symbols are much easier for human to understand. We can understand the strad
 
 Symbol extraction also has some denoising effect.
 Because symbolic extraction outputs the most significant features (or types), then the noise would be filtered out.
-That was about the overview of our project, Now my team member junming will talk about what methos we use.
+That was about the overview of our project, Now my team member junming will talk about what methods we used.
 
 ### Slide 8
 Now let's have a look at what method we used to achieve our goal in the project.
@@ -181,9 +181,9 @@ Where the distribution of the symbols are regular, but not a random distribution
 
 ### Slide 23
 So here are some proposals for our future work of our project.
-1. We can continue on the random dustribution symbol setup indead of grid set up.
+1. We can continue on the random dustribution symbol setup indead of grid set up
 2. And we can add more different kinds of symbols to our games to make our project more general.
-3. Also we are using only the classic tabular Q-learning algorithm, so we can try DQN or some other reinforcement learning algorithms in the future work, to see if it works better or not..
+3. Also we are using only the classic tabular Q-learning algorithm, so we can ttry use some more advanced reinforcement learning algorithms sych DQN in the future work, to see if it works better.
 4. And we can run more training episodes for longer to have a more general result, to see if it converging not.
 
 
