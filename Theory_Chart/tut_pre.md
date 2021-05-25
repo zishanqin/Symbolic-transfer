@@ -12,7 +12,7 @@ What our project is, what method we used, how we did the experiment and some dis
 
 ### Slide 3: <br>
 So let's have a look at the game that we are using for the project.
-The game rule is to hit as many as positive object as possible, while avoiding the negative objects. 指ppt上的 Agent，Postive 和 Negative.<br> 介绍正负reward。
+The game rule is to hit as many positive object as possible, while avoiding the negative objects. 指ppt上的 Agent，Postive 和 Negative.<br> 介绍正负reward。
 
 
 ### Slide 4: <br>
