@@ -41,20 +41,20 @@ For example in this project we let the agent reuse the Q-value table,
 so in the target task we have this Q-value table for the agent already,
 and no need to train from the scratch.
 
-Therefore we need less training time and less training data since we have Q-value table.
-In the target domain, our task essentially change from training from scrach to adapting previous knowledgage. 
-Therefore transfer learning allows us to achieve a good result at early training stage.
-We can train further to improve the performance.
+Therefore we need less training time and less training data since we have Q-value table. <br>
+In the target domain, our task essentially change from training from scrach to adapting previous knowledgage.  <br>
+Therefore transfer learning allows us to achieve a good result at early training stage. <br>
+We can train further to improve the performance. 
 
 
 ### Slide 7
 So that was about transfer learning.
 And here are the advantages for symbolic extraction.
 The first one is that the learning procedure for the agent has much less spacial complexity.
-The agent algorithm only need to take the entities and their positions as input, instead of a whole 100 by 100 pixels from the image.
+The agent algorithm only need to take the entities and their positions as input, instead of matrix of pixels with RGB colours from the image.
 
-Also if the symbol is of some very complicated pattern, for the agent it would be just a coordinate with a type.
-We don't care about if the symbol is a complicated shape or not.
+Also if the symbol is of some very complicated pattern,the agent only see it as a type with coordinate.
+Agnet does't care about if the symbol is a complicated shape or not.
 
 And symbols are much easier for human to understand, about how the learning actually works.
 If it's an algorithm about image pixels it would be almost impossible for human to understand what is going on with the learning.
