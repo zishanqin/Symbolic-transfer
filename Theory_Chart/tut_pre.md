@@ -69,9 +69,10 @@ Now that was about the overview of our project,
 Now let's have a look at what method we used to achieve our goal in the project.
 
 This is the structure of what we've done.
+
 So for the source game, we first use the auto-encoder to extract auto-types from the image pixels,
 then use probe policy to classify the auto-types to positive and negative symbols.
-Then we train the reinforcement learning algorithm, and obtain a policy based on the positive and negative symbols.
+Then we train the agent, and obtain a policy based on the positive and negative symbols.
 
 We do the same stuff for the target game as well. So here we have different-looking symbol,
 but after the classification we get the same positives and negatives.
