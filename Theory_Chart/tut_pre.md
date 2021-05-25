@@ -43,7 +43,7 @@ and no need to train from the scratch.
 Therefore we need less training time and less training data since we have Q-value table. <br>
 In the target domain, our task essentially change from training from scrach to adapting previous knowledgage.  <br>
 Therefore transfer learning allows us to achieve a good result at early training stage. <br>
-We can train further to improve the performance. 
+In the further training, we can acheive better performance.
 
 
 ### Slide 7
