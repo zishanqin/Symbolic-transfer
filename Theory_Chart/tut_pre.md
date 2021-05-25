@@ -56,10 +56,11 @@ The agent algorithm only need to take the entities and their positions as input,
 Also if the symbol is of some very complicated pattern,the agent only see it as a type with coordinate.
 Agnet does't care about if the symbol is a complicated shape or not.
 
-And symbols are much easier for human to understand, about how the learning actually works.
-If it's an algorithm about image pixels it would be almost impossible for human to understand what is going on with the learning.
 
-It also has some denoising effect.
+And symbols are much easier for human to understand. We can understand the stradgy of agent better. It aslo help us to debug.
+
+
+Symbol extraction also has some denoising effect.
 Because symbolic extraction outputs the most significant features (or types), then the noise would be filtered out.
 
 
