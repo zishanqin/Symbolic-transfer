@@ -94,9 +94,10 @@ That's what we get, on the right hand side, just some auto-types with the coordi
 We compressed the information of one image into these auto-types.
 
 Now imagine you are an agent and you want to learn the environment, the left-hand side would be much more complicated,
-It has a matrix of 84*84*3, which is a lot of information.
+It has a matrix of 84* 84 * 3, which is huge a lot of information.
 
-Compared to the pixels, the input for the agent is much less, for each step of the learning and decision making.
+Compared to the pixels on the right hand side, the input on the right hand side is much smaller for the agent, 
+for each step of the learning and decision making.
 
 
 ### Slide 12
