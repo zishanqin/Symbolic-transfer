@@ -181,23 +181,24 @@ Where the distribution of the symbols are regular, but not a random distribution
 
 ### Slide 23
 So here are some proposals for our future work of our project.
-We can continue on the random dustribution symbol setup indead of grid set up.
-And we can add more different kinds of symbols to our games to make our project more general.
-Also we are using only the classic tabular Q-learning algorithm, so we can try DQN or some other reinforcement learning algorithms in the future work, to see if it works better or not..
-And we can run more training episodes for longer to have a more general result, to see if it converging not.
+1. We can continue on the random dustribution symbol setup indead of grid set up.
+2. And we can add more different kinds of symbols to our games to make our project more general.
+3. Also we are using only the classic tabular Q-learning algorithm, so we can try DQN or some other reinforcement learning algorithms in the future work, to see if it works better or not..
+4. And we can run more training episodes for longer to have a more general result, to see if it converging not.
 
 
 ### Slide 24
 We think it's a quite meaningful project, and we learnt a lot from it.
 We learnt how to do research as a team, to communicate and cooperate with each other.
 We learnt research methodologies, like reading papers, selecting research topics, understanding models etc.
-And we also learnt some more technical concepts, such as symbolic extraction from images, and transfer learning in deep reinforcement learning.
+And we also learnt some more theretical concepts, such as symbolic extraction from images, and transfer learning in deep reinforcement learning.
 
 We think it was a fantastic experience.
 
 
 ### Slide 25
-That's all for our presentation. Any question?
+So this is our project, a simple attempt on combining symbolic AI and transfer learning.
+That's all for our presentation. Thankyou all for listening. Any question?
 
 
 ### Q-learning function 
