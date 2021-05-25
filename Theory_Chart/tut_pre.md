@@ -200,3 +200,11 @@ We think it was a fantastic experience.
 
 ### Slide 25
 That's all for our presentation. Any question?
+
+
+### Q-learning function 
+The update rule for the interaction between objects of types i and j is given by:<br>
+
+where α is the learning rate, γ is a temporal discount factor, and each state sij represents an interaction t
+between object types i and j at time t. After learning, the values of the Qij functions are added, and the action with the largest sum is chosen as shown in Equation 2.
+
