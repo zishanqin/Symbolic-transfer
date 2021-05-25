@@ -1,6 +1,6 @@
 # Tutorial
 ### Slide 1: <br>
-Hi, everyone! I am xxx, today I am going to present our project with with junming. Our reseaech topic is Symbolic Transfer in Games in Deep Reinforcement,supervised by Katya. The other team menmber is taylor. <br>
+Hi, everyone! I am xxx, today I am going to present our project with junming. Our reseaech topic is Symbolic Transfer in Games in Deep Reinforcement,supervised by Katya. The other team menmber is taylor. <br>
 
 
 ### SLide 2:
