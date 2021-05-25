@@ -170,7 +170,7 @@ Even without the transfer, we can see that the classification step significantly
 And as for the transferred result, we can see that there is a significant improvement when the training just got started.
 So it shows that our transferred method did accelerate the learning.
 
-So from our experiment, we can say that our tranfer method is successful.
+To summerise, from our experiment, we can say that our tranfer method is successful.
 And our classification method is also successful.
 
 We have a few drawbacks of our experiment though:
