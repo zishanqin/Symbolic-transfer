@@ -113,9 +113,11 @@ therefore the noise would be filtered out.
 Let's move on to the probe policy now.
 
 Because the auto-coder is essentially extracting the features out of the image,
-so it might give us more than one auto-types for one symbol. Or less when if the symbols are distributed crowdedly together.
+so we don't know if an auto-type is pos. or neg.
 
-So we not necessarily going to have a one-to-one correspondence for the auto-types and the pos. and neg. symbols.
+Also we might give us more than one auto-types for one symbol. Or less when if the symbols are distributed crowdedly together.
+
+So we not necessarily going to have a one-to-one correspondence for the auto-types and the symbols.
 
 That's why we need to classify them.
 
