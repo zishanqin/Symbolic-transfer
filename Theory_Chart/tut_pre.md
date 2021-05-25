@@ -34,7 +34,7 @@ It's because we integrate the idea of symbolic extraction into transfer learning
 
 ### Slide 6
 So transfer learning has several advantages. Most of the time if we train from scratch in reinforcement learning,
-we would need quite a lot of training time and data to do exploration in the beginning.
+we would need quite a lot of training time and data to do exploration at the beginning.
 
 However, if we use transfer learning, we can reuse the knowledge from the source task.
 For example in this project we let the agent reuse the Q-value table,
@@ -43,7 +43,7 @@ and no need to train from the scratch.
 
 Therefore we need less training time and less training data since we have Q-value table.
 In the target domain, our task essentially change from training from scrach to adapting previous knowledgage. 
-And this allows us to achieve a good result at early training stage.
+Therefore transfer learning allows us to achieve a good result at early training stage.
 We can train further to improve the performance.
 
 
