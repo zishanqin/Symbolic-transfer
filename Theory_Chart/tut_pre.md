@@ -149,6 +149,7 @@ Here we just used the classic Q-learning. And this is our Q-value table.
 We use this formula to update the Q-value after each learning step,
 and use this formula to decide which action to take each step for the agent.
 
+The Q-value table here has type1 for the pos., and typ2 for the neg.
 We can then reuse the table for the target domain because they are using the same symbol representation space, pos. and neg.
 
 
