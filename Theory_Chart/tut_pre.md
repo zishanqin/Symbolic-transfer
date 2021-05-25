@@ -162,7 +162,7 @@ Each of the setup was ran for 500 training episodes, and the measurement is just
 
 
 ### Slide 21
-This is the result of training from scratch.
+This is the result of training from scratch. Our classification step via probing policy.
 Even without the transfer, we can see that the classification step significantly improves the performance of training.
 
 
