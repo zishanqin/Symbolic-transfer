@@ -198,7 +198,7 @@ We think it was a fantastic experience.
 
 ### Slide 25
 So this is our project, a simple attempt on combining symbolic AI and transfer learning.
-That's all for our presentation. Thankyou all for listening. Any question?
+That's all for our presentation. Thankyou all for listening. Hope you not find it too boring. Any question?
 
 
 ### Q-learning function 
