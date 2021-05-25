@@ -10,6 +10,7 @@ What our project is, what method we used, how we did the experiment and some dis
 
 ### Slide 3: <br>
 So let's have a look at the game that we are using for the project.
+We have three different kinds of objects in our game, an agent, and a bunch of positive and negative objects.
 We have our agent here in the middle of our game, our agent can move aound. 
 The game rule is to hit as many positive object as possible, while avoiding the negative objects. Hit a positive object , we can gain one more score, but hit negative object , we would lose one score. <br> 
 
