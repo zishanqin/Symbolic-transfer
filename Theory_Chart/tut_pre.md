@@ -111,10 +111,12 @@ therefore the noise would be filtered out.
 
 ### Slide 13
 Let's move on to the probe policy now.
-After we got the auto-types from the auto-encoder, we use the probe policy to classify them into positive and negative symbols.
-Because the auto-coder is essentially extracting the feature patterns out of the image,
-so it might give us more than one auto-types for one symbol. Or less when it comes to dense areas.
+
+Because the auto-coder is essentially extracting the features out of the image,
+so it might give us more than one auto-types for one symbol. Or less when if the symbols are distributed crowdedly together.
+
 So we not necessarily going to have a one-to-one correspondence for the auto-types and the pos. and neg. symbols.
+
 That's why we need to classify them.
 
 
