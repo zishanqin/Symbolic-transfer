@@ -183,8 +183,8 @@ Where the distribution of the symbols are regular, but not a random distribution
 So here are some proposals for our future work of our project.
 1. We can continue on the random dustribution symbol setup indead of grid set up
 2. And we can add more different kinds of symbols to our games to make our project more general.
-3. Also we are using only the classic tabular Q-learning algorithm, so we can ttry use some more advanced reinforcement learning algorithms sych DQN in the future work, to see if it works better.
-4. And we can run more training episodes for longer to have a more general result, to see if it converging not.
+3. Also we are using only the classic tabular Q-learning algorithm, so we can try to use some more advanced reinforcement learning algorithms sych DQN in the future work, to see if it works better.
+4. And we can run more training episodes to see if it converging not.
 
 
 ### Slide 24
