@@ -1,16 +1,16 @@
 # Symbolic Transfer in Games in DRL
-### Report
+## Report
 report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
 
 
-### Previous Tut Presentation url
+## Previous Tut Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
 Tut W10: https://youtu.be/i5gWM5KYeR8<br>
 Tut W9: https://youtu.be/JaT9m5BhNh4<br>
 Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
 Tut W7: https://youtu.be/r4mUwgBTt0k
 
-# Reference
+## Reference
 ### Symbolic: 
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
 2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
@@ -33,9 +33,6 @@ Examples of on-policy TD-learning algorithms include SARSA [16], Expected SARSA 
 2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
 3. Encountered problems: Atari games are complex domains, and the symbolic representations might not be easily underastandable. Change to easier domain as symbolic.3.
 
-
-
-### ------------------------
 
 ## Installation
 
