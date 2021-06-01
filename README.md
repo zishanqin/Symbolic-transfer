@@ -1,43 +1,14 @@
 # Symbolic Transfer in Games in DRL
-### Presentataion edit link
-https://anu365-my.sharepoint.com/:p:/g/personal/u6808226_anu_edu_au/EUJQUnCPpvBBlUbb6xu6IaUBPHdAIQZJg5Z8q_2pHlsjhg?e=AkYXLM <br>
+### Report
+report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
 
-### Presentation url
+
+### Previous Tut Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
 Tut W10: https://youtu.be/i5gWM5KYeR8<br>
 Tut W9: https://youtu.be/JaT9m5BhNh4<br>
 Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
 Tut W7: https://youtu.be/r4mUwgBTt0k
-
-# Mark:
-1. (3 Minute Lecture talk, May24, 11am-1pm) 10 marks - 6 marks for presentation, 4 marks for slides
-2. (15 minute tutorial presentation, including 3 minutes for questions) 10 marks – 6 marks for presentation, 4 marks for slides
-
-# TODO
-1. GAN configuration
-2. Game configuration, selection, visualisation (compare to DQN) (Junming)
-3. Symbolic extraction: read paper (Wei), Contrastive learning coding part (Zishan)
-4. Combination of GAN and symbolic AI
-5. Report
-
-# Sub-TODO (Before 16 May)
-1. Merge the code in 'towards' to have an Encoder
-2. Create some target domains (with the same size)
-3. Check the 'not-good' result and visualize
-4. Add probe policy
-5. Visualize
-6. Make slide 
-7. (Future work: Use GAN to generate target domain) 
-8. (may explore the tranfer for different domains)
-
-# Questions
-1. Game suggestions for symbolic GAN
-
-# Due date
-1. Finish A3 questions (Q3 find paper) before 7 May
-2. 10 May (week 10) prepare presentation
-3. Presentation slide should be submitted by 4pm, 23 May
-4. 24 May offline lecture presentation + May 26 tutorial presentaion
 
 # Reference
 ### Symbolic: 
@@ -62,11 +33,9 @@ Examples of on-policy TD-learning algorithms include SARSA [16], Expected SARSA 
 2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
 3. Encountered problems: Atari games are complex domains, and the symbolic representations might not be easily underastandable. Change to easier domain as symbolic.3.
 
-### Previous documentation 
-url: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EbjwMkLdK19KiLQwz_D9BZwB7MWk1nRQBs57UB8yXFS1eA?e=6hFOjz<br>
-report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
 
----
+
+### ------------------------
 
 ## Installation
 
