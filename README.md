@@ -1,6 +1,7 @@
 # Symbolic Transfer in Games in DRL
 ## Report
 report link: https://anu365-my.sharepoint.com/:w:/g/personal/u6808226_anu_edu_au/EVur9NIUDHxNio0RT4jwvMYBo5k63a0kpeVr-Oio4YkJyA?e=gogCRB
+tut pre link: https://anu365-my.sharepoint.com/:p:/r/personal/u6808226_anu_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7B70525042-A68F-41F0-9546-DBEB1BBA21A5%7D&file=tut%20pre.pptx&action=edit&mobileredirect=true
 
 
 ## Previous Tut Presentation url
