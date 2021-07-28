@@ -13,7 +13,7 @@ A Deep Reinforcement Learning (DRL) auto-agent reads the image pixels of the gam
 ## Game Rule
 The rule of both source and target are the same. The agent is allowed to move around in the 84×84 2D-grid-space, while the other objects are fixed. The goal is to have the agent hit as many positive objects as possible, while avoid hitting negative symbols during the motion. Once the agent hits a positive object, one point is added to the game's score; if the agent hits a negative object, one point is deducted from the total score.  
 
-## Installation
+## Getting started
 
 ### Enter GPU if you are an ANU student
 ```
@@ -62,6 +62,13 @@ pip install sklearn
 
 pip install tqdm
 ```
+### Solve error for cross and circle file
+```
+pip list | grep tf
+
+pip install tensorflow --upgrade --force-reinstall
+```
+
 
 ## Run our code
 ### Run the plus and minus file
@@ -78,13 +85,6 @@ cd PyDSRL/
 
 python main.py
 ```
-### Solve error for cross and circle file
-```
-pip list | grep tf
-
-pip install tensorflow --upgrade --force-reinstall
-```
-
 <!-- ## Previous Tut Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
 Tut W10: https://youtu.be/i5gWM5KYeR8<br>
