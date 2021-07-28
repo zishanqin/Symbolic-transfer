@@ -91,7 +91,9 @@ Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
 Tut W7: https://youtu.be/r4mUwgBTt0k
 
 ## Reference
-
+1. [Towards deep symbolic reinforcement learning](https://arxiv.org/abs/1609.05518) Garnelo, M., Arulkumaran, K. and Shanahan, M., 2016.<br>
+2. [Towards symbolic reinforcement learning with common sense](https://arxiv.org/abs/1804.08597) Garcez, A.D.A., Dutra, A.R.R. and Alonso, E., 2018.<br>
+3. [Single Episode Policy Transfer in Reinforcement Learning](https://arxiv.org/abs/1910.07719) Yang, J., Petersen, B., Zha, H., & Faissol, D., 2019 <br>
 
 ## Contribution: 
 1. [State of the art](https://github.com/taesungp/contrastive-unpaired-translation) <br>
@@ -101,9 +103,7 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 3. [Symbolic Reinforcement Learning with Common Sense](https://github.com/AimoreRRD/Reinforcement-Learning-Research)<br>
 4. [Why would symbolic AI be useful](https://innovature.ai/symbolic-artificial-intelligence/)
 
-### Probe policy:
-Single Episode Policy Transfer in Reinforcement Learning
-https://arxiv.org/abs/1910.07719
+
 
 ### Possible RL techniques
 1. Monte-Carlo Methods 
