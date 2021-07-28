@@ -1,5 +1,5 @@
 # Reinforcement Learning Research Game
-Symbolic Game implementation. Coding credits to: [Aimore](https://github.com/AimoreRRD/AIMORE_GAME)
+Symbolic Game implementation. Coding credits to: [Aimore](https://github.com/AimoreRRD/AIMORE_GAME).
 <!-- 
 
 ### Link to the Paper
