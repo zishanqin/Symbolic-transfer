@@ -93,11 +93,10 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 ## Reference
 ### Symbolic: 
 1. State of the art: https://github.com/taesungp/contrastive-unpaired-translation ISSUE: may not be compatible with the inverse GAN process<br>
-2. Deep Feature Extraction for Sample-Efficient Reinforcement Learning: https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf Chapter 4 <br>
 
 2.[Report: Deep Feature Extraction for Sample-Efficient Reinforcement Learning: Chapter 4 (https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf ) <br>
 
-3. [Report:Symbolic Reinforcement Learning with Common Sense](https://github.com/AimoreRRD/Reinforcement-Learning-Research)<br>
+3.[Report:Symbolic Reinforcement Learning with Common Sense](https://github.com/AimoreRRD/Reinforcement-Learning-Research)<br>
 4. Why would symbolic AI be useful: https://innovature.ai/symbolic-artificial-intelligence/
 
 ### Probe policy:
