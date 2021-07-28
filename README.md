@@ -2,25 +2,25 @@
 
 ## Installation
 
-### Enter GPU
+### Enter GPU if you are an ANU student
 ```
 ssh uID@stugpu2.anu.edu.au
 ```
-### create conda virtual env
+### Create conda virtual env
 ```
 source /usr/local/anaconda3/etc/profile.d/conda.sh
 
 conda create -n symbolenv python=3.6
 ```
 
-### enter/exit virual environment
+### Enter/exit virual environment
 ```
 conda activate symbolenv
 
 conda deactivate symbolenv
 ```
 
-### install packages (!!watch out for `conda` and `pip`!!)
+### Install packages (!!watch out for `conda` and `pip`!!)
 ```
 pip install pygame
 
@@ -33,7 +33,7 @@ conda install matplotlib
 conda install xlsxwriter
 ```
 
-### for Copland computers (should be run inside the vscode terminal)
+### Once-off installation for Copland computers (should be run inside the vscode terminal)
 ```
 pip install gym
 
@@ -49,7 +49,7 @@ pip install sklearn
 
 pip install tqdm
 ```
-### run the plus and minus file
+### Run the plus and minus file
 ```
 cd symblic_game/
 
@@ -57,7 +57,7 @@ python NEW_GAME.py
 ```
 Press `G` to pause the game and plot graph. Close the graph to continue game playing.
 
-### run the cross and circle file
+### Run the cross and circle file
 ```
 cd PyDSRL/
 
