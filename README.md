@@ -83,19 +83,20 @@ pip list | grep tf
 pip install tensorflow --upgrade --force-reinstall
 ```
 
-## Previous Tut Presentation url
+<!-- ## Previous Tut Presentation url
 Tut W11: https://youtu.be/6pULjybU8aU<br>
 Tut W10: https://youtu.be/i5gWM5KYeR8<br>
 Tut W9: https://youtu.be/JaT9m5BhNh4<br>
 Tut W8: https://youtu.be/r4dzfbB_w8Y<br>
-Tut W7: https://youtu.be/r4mUwgBTt0k
+Tut W7: https://youtu.be/r4mUwgBTt0k -->
 
 ## Reference
 1. [Towards deep symbolic reinforcement learning](https://arxiv.org/abs/1609.05518) Garnelo, M., Arulkumaran, K. and Shanahan, M., 2016.<br>
 2. [Towards symbolic reinforcement learning with common sense](https://arxiv.org/abs/1804.08597) Garcez, A.D.A., Dutra, A.R.R. and Alonso, E., 2018.<br>
 3. [Single Episode Policy Transfer in Reinforcement Learning](https://arxiv.org/abs/1910.07719) Yang, J., Petersen, B., Zha, H., & Faissol, D., 2019 <br>
 
-## Contribution: 
+## Credits
+Thanks for the following open source projects.
 1. [Contrastive Unpaired Translation (CUT)](https://github.com/taesungp/contrastive-unpaired-translation) <br>
 
 <!-- 2. [Deep Feature Extraction for Sample-Efficient Reinforcement Learning: Chapter 4](https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf ) <br> -->
@@ -106,8 +107,8 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 
 4. [Symbolic game with autoencoder](https://github.com/ivegner/PyDSRL)<br>
 
-## Contributor 
-[Junming Zhang](https://github.com/flamingopink),[Taylor Qin](https://github.com/zishanqin),[Wei Zhou](https://github.com/weizhou1)
+## Contributors
+[Junming Zhao](https://github.com/flamingopink), [Taylor Qin](https://github.com/zishanqin), [Wei Zhou](https://github.com/weizhou1)
 
 ## License
 This project is under the [MIT Licence](https://github.com/zishanqin/Symbolic-transfer/blob/main/LICENSE).
