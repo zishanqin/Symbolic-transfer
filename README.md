@@ -101,7 +101,10 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 2. [Deep Feature Extraction for Sample-Efficient Reinforcement Learning: Chapter 4](https://danielegrattarola.github.io/files/publications/2017_10_grattarola_master_thesis.pdf ) <br>
 
 3. [Symbolic Reinforcement Learning with Common Sense](https://github.com/AimoreRRD/Reinforcement-Learning-Research)<br>
-4. [Why would symbolic AI be useful](https://innovature.ai/symbolic-artificial-intelligence/)
+
+4. [Why would symbolic AI be useful](https://innovature.ai/symbolic-artificial-intelligence/)<br>
+
+5. [Symbolic game with autoencoder](https://github.com/ivegner/PyDSRL)<br>
 
 
 
