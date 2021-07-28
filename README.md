@@ -106,14 +106,8 @@ Tut W7: https://youtu.be/r4mUwgBTt0k
 
 4. [Symbolic game with autoencoder](https://github.com/ivegner/PyDSRL)<br>
 
-
-
-
-### Games: <br> 
-1. Baselines (using DQN or PPO) https://openai.com/blog/openai-baselines-dqn/cs/
-2. Seleted Games for the project (Enduro, Venture, Bowling?) http://gym.openai.com/envs/#classic_control <br>
-3. Encountered problems: Atari games are complex domains, and the symbolic representations might not be easily underastandable. Change to easier domain as symbolic.3.
-
+## Contributor 
+[Junming Zhang](https://github.com/flamingopink),[Taylor Qin](https://github.com/zishanqin),[Wei Zhou](https://github.com/weizhou1)
 
 ## License
 This project is under the [MIT Licence](https://github.com/zishanqin/Symbolic-transfer/blob/main/LICENSE).
