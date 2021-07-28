@@ -62,6 +62,8 @@ pip install sklearn
 
 pip install tqdm
 ```
+
+## Run our code
 ### Run the plus and minus file
 ```
 cd symblic_game/
