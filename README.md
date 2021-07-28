@@ -4,8 +4,9 @@
 In our project, our objective is to find an effective way to transfer knowledge between games with similar rules but different object representations. We denote the game that provides the knowledge as the ‘source game’, and the game that accepts the knowledge as the ‘target game’. The experience we gain by playing games in the source-game is stored as knowledge and would be transferred to the target game via our transfer method. 
 
 ![](https://github.com/zishanqin/Symbolic-transfer/blob/main/img/gameDisplay.png)
+**Remark.** The left-hand-side game is the source domain, from which we gain the policy. The one on the right is the target domain, the one that uses the transferred policy for playing. 
 
-We specifically selected the above source game and the target game for our project, as shown in Figure 1. In the source game on the left-hand-side, the positive objects are the plus signs, and the negative objects are the triangles. In the target game on the right-hand-side, the positive objects are the crosses; and the negatives objects are the circles. Our agent is marked as the diamond sign in both games. 
+We specifically selected the above source game and the target game for our project, as shown in the figure. In the source game on the left-hand-side, the positive objects are the plus signs, and the negative objects are the triangles. In the target game on the right-hand-side, the positive objects are the crosses; and the negatives objects are the circles. Our agent is marked as the diamond sign in both games. 
 
 A Deep Reinforcement Learning (DRL) auto-agent reads the image pixels of the game as input and decides the movement action. To summarize, we aim to find a transfer method such that: if a ‘smart’ DRL agent knows how to move to achieve a best reward in the source game, then it should know how to play in the target game as well. 
 
