@@ -103,9 +103,9 @@ Thanks for the following open source projects.
 
 2. [Symbolic Reinforcement Learning with Common Sense](https://github.com/AimoreRRD/Reinforcement-Learning-Research)<br>
 
-3. [Why would symbolic AI be useful](https://innovature.ai/symbolic-artificial-intelligence/)<br>
+<!-- 3. [Why would symbolic AI be useful](https://innovature.ai/symbolic-artificial-intelligence/)<br> -->
 
-4. [Symbolic game with autoencoder](https://github.com/ivegner/PyDSRL)<br>
+3. [Symbolic game with autoencoder](https://github.com/ivegner/PyDSRL)<br>
 
 ## Contributors
 [Junming Zhao](https://github.com/flamingopink), [Taylor Qin](https://github.com/zishanqin), [Wei Zhou](https://github.com/weizhou1)
