@@ -119,3 +119,6 @@ Examples of on-policy TD-learning algorithms include SARSA [16], Expected SARSA 
 3. Encountered problems: Atari games are complex domains, and the symbolic representations might not be easily underastandable. Change to easier domain as symbolic.3.
 
 
+## License
+This project is under the MIT Licence.
+![](https://github.com/zishanqin/Symbolic-transfer/blob/main/LICENSE)
